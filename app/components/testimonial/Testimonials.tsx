@@ -57,9 +57,8 @@ const Testimonials: React.FC = () => {
       const cardWidth = card.clientWidth;
       setCardWidth(cardWidth);
       const cardsPerScreen = Math.floor(containerWidth / cardWidth);
-      
+
       const cardsLeft = testimonialData.length - cardsPerScreen;
-     
 
       setDotsCount(
         cardsLeft > 0 ? Math.min(cardsLeft, testimonialData.length - 1) + 1 : 1
@@ -109,7 +108,7 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <section className="py-16">
+    <section className="py-16 md:my-30">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-cinzel font-bold text-primary text-center mb-12">
           Real Stories. Real Transformation.
