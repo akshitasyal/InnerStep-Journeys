@@ -26,14 +26,14 @@ const AboutUs: React.FC = () => {
               <p>
                 InnerStepJourneys is a spiritual travel collective dedicated to
                 curating immersive pilgrimages, educational tours, and
-                soul-nourishing retreats across India's sacred geography. We
-                serve students, families, seekers, and faith-based communities —
-                blending ancient wisdom with mindful facilitation.
+                soul-nourishing retreats across India&apos;s sacred geography.
+                We serve students, families, seekers, and faith-based
+                communities — blending ancient wisdom with mindful facilitation.
               </p>
               <p>
                 Our journeys are crafted not just to explore holy places, but to
                 awaken inner purpose, deepen values, and reconnect with the
-                divine within. Whether you're walking the sacred sands of
+                divine within. Whether you&apos;re walking the sacred sands of
                 Vrindavan, chanting by the Ganga in Rishikesh, or meditating
                 beneath the Himalayan sky — every InnerStepJourney is a call to
                 grow from the inside out.
