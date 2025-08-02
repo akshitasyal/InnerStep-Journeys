@@ -44,7 +44,6 @@ const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [dotsCount, setDotsCount] = useState(1);
   const [cardWidth, setCardWidth] = useState(0);
-  const [supportCardCount, setSupportCardCount] = useState(1);
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -58,10 +57,9 @@ const Testimonials: React.FC = () => {
       const cardWidth = card.clientWidth;
       setCardWidth(cardWidth);
       const cardsPerScreen = Math.floor(containerWidth / cardWidth);
-      console.log("CardsPerScreen ", cardsPerScreen);
-      setSupportCardCount(cardsPerScreen);
+      
       const cardsLeft = testimonialData.length - cardsPerScreen;
-      console.log(cardsLeft);
+     
 
       setDotsCount(
         cardsLeft > 0 ? Math.min(cardsLeft, testimonialData.length - 1) + 1 : 1
