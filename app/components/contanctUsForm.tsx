@@ -7,8 +7,8 @@ function ContanctUsForm() {
       <Image
         className="flex-1 w-screen lg:h-full h-[10px] "
         src="/images/contactUsImage.png"
-        width={100}
-        height={727}
+        width={1024}
+        height={760}
         alt="Praying Image"
       />
       <div className="flex-1 flex justify-center items-center">
