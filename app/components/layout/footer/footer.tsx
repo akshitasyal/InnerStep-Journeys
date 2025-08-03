@@ -33,7 +33,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="overflow-hidden relative">
+    <footer className="relative">
       <Image
         src="/svg/bg-vector.svg"
         width={100}
