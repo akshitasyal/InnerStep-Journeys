@@ -10,40 +10,40 @@ const WhatWeOffer: React.FC = () => {
       title: "Personalised Travel Assistance",
       description:
         "From arrival to darshan, we guide you every step with care and devotion.",
-      imagePath: "/images/sacredPlacesImage1.png", // Using existing image as placeholder
+      imagePath: "/images/serviceImage1.png",
     },
     {
       id: 2,
       title: "Customised Batch-Wise Group Travel",
       description:
         "Each journey tailored to your group's pace, needs, and intentions.",
-      imagePath: "/images/sacredPlacesImage2.png", // Using existing image as placeholder
+      imagePath: "/images/serviceImage2.png",
     },
     {
       id: 3,
       title: "Based on Location & Spiritual Calendar",
       description: "Timings that align with sacred energies and festivals.",
-      imagePath: "/images/sacredPlacesImage3.png", // Using existing image as placeholder
+      imagePath: "/images/serviceImage3.png",
     },
     {
       id: 4,
       title: "Karma Yoga in Action Without Expectations",
       description: "Do good without asking – just as the Gita teaches.",
-      imagePath: "/images/sacredPlacesImage4.png", // Using existing image as placeholder
+      imagePath: "/images/serviceImage4.png",
     },
     {
       id: 5,
       title: "Verified Donations – Meals, Pujas, Support",
       description:
         "Your offerings go where they matter, with complete authenticity.",
-      imagePath: "/images/sacredPlacesImage5.png", // Using existing image as placeholder
+      imagePath: "/images/serviceImage5.png",
     },
     {
       id: 6,
       title: "Verified Donations – Meals, Pujas, Support",
       description:
         "Your offerings go where they matter, with complete authenticity.",
-      imagePath: "/images/sacredPlacesImage6.png", // Using existing image as placeholder
+      imagePath: "/images/serviceImage5.png",
     },
   ];
 
