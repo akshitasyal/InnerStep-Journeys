@@ -1,0 +1,55 @@
+.grid-container {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 301px 299px 202px 110px 110px 279px;
+    grid-template-rows: 194px;
+    max-width: 1300px;
+    margin: 0 auto;
+    justify-content: center; /* Center the grid horizontally */
+}
+
+.grid-item {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0px 4px 9px var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+/* Remove the justify-self: end from item1 as it's causing alignment issues */
+/* .item1 {
+    justify-self: end;
+} */
+
+.item3 {
+    grid-row: span 2;
+}
+
+.item4 {
+    grid-column: span 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+
+    .grid-item {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
