@@ -30,7 +30,7 @@ const Welcome: React.FC = () => {
               and connection.
             </p>
           </div>
-          <div className="xl:col-span-4 relative h-[300px] overflow-hidden">
+          <div className="xl:col-span-4 relative h-[300px] rounded-lg overflow-hidden">
             <Image
               src="/images/welcomeImage1.png"
               alt="Meditation"
@@ -38,7 +38,7 @@ const Welcome: React.FC = () => {
               className="object-cover"
             />
           </div>
-          <div className="xl:col-span-2 relative h-[300px] overflow-hidden">
+          <div className="xl:col-span-2 relative h-[300px] rounded-lg overflow-hidden">
             <Image
               src="/images/welcomeImage2.png"
               alt="Spiritual guide"
@@ -46,7 +46,7 @@ const Welcome: React.FC = () => {
               className="object-cover"
             />
           </div>
-          <div className="xl:col-span-5 relative h-[300px]  overflow-hidden">
+          <div className="xl:col-span-5 relative h-[300px] rounded-lg  overflow-hidden">
             <Image
               src="/images/welcomeImage3.png"
               alt="Temple ceremony"
@@ -54,7 +54,7 @@ const Welcome: React.FC = () => {
               className="object-cover"
             />
           </div>
-          <div className="xl:col-span-3 relative h-[300px] overflow-hidden">
+          <div className="xl:col-span-3 relative h-[300px] rounded-lg overflow-hidden">
             <Image
               src="/images/welcomeImage4.png"
               alt="Spiritual ceremony"
@@ -62,7 +62,7 @@ const Welcome: React.FC = () => {
               className="object-cover"
             />
           </div>
-          <div className="xl:col-span-2 relative h-[300px] overflow-hidden">
+          <div className="xl:col-span-2 relative h-[300px] rounded-lg overflow-hidden">
             <Image
               src="/images/welcomeImage5.png"
               alt="Holi celebration"
