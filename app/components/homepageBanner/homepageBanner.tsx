@@ -4,7 +4,7 @@ import FloatingWindow from "./floatingWindow";
 
 const MeditationBanner: React.FC = () => {
   return (
-    <section className="relative w-full py-6 mt-10">
+    <section className="relative w-full">
       <FloatingWindow />
 
       <div className="relative w-full">
