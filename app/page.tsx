@@ -5,10 +5,12 @@ import FeaturedDestination from "./components/featruedDestination/FeaturedDestin
 import WhatWeOffer from "./components/whatWeOffer/WhatWeOffer";
 import Welcome from "./components/welcome/Welcome";
 import MeditationBanner from "./components/homepageBanner/homepageBanner";
+import HeroSection from "./components/heroSection";
 
 export default function Home() {
   return (
     <>
+      <HeroSection />
       <MeditationBanner />
       <Welcome />
       <WhatWeOffer />
