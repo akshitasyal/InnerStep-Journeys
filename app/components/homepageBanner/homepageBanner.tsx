@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { FaSpa, FaDove, FaPrayingHands } from "react-icons/fa";
 import FloatingWindow from "./floatingWindow";
 
 const MeditationBanner: React.FC = () => {
