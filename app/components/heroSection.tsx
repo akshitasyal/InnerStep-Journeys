@@ -16,7 +16,7 @@ function HeroSection() {
       autoPlay
       loop
       muted
-      className="w-full md:h-screen bg-black object-contain"
+      className="w-full md:h-screen bg-black object-contain 2xl:object-cover"
       onClick={handleUnmute}
       ref={videoPlayer}
     >
