@@ -14,6 +14,11 @@
   --breakpoint-navbar-lg: 1140px;
 }
 
+body {
+  background-color: var(--color-secondary);
+}
+
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
