@@ -3,7 +3,7 @@ import React from "react";
 
 function ContanctUsForm() {
   return (
-    <div className="w-full flex flex-col lg:flex-row">
+    <div className="w-full flex flex-col lg:flex-row" id="contact">
       <Image
         className="flex-1 w-screen lg:h-full h-[10px] "
         src="/images/contactUsImage.png"
