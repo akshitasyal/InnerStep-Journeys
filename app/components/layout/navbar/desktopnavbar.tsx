@@ -1,36 +1,46 @@
+"use client";
 import Image from "next/image";
-import React, { ReactNode } from "react";
+import React from "react";
+import MenuItems from "./menuItems";
+import Link from "next/link";
 
-function MenuItems({ name }: { name: string }): ReactNode {
-  return (
-    <li className="uppercase cursor-pointer hover:text-primary">
-      <span className="text-xl">{name.charAt(0)}</span>
-      {name.slice(1)}
-    </li>
-  );
-}
+const LeftSideMenu = () => (
+  <ul className="flex flex-1 gap-16 items-center">
+    <MenuItems name="experience" />
+    <MenuItems name="Darshana" />
+    <MenuItems name="Yatra" />
+  </ul>
+);
 
-function Desktopnavbar() {
+const RightSideMenu = () => (
+  <ul className="flex flex-1 gap-16 items-center">
+    <MenuItems name="Seva" />
+    <MenuItems name="Dana" />
+    <a
+      href="#contact"
+      className="uppercase cursor-pointer py-0.5 rounded-2xl px-3 hover:text-primary"
+    >
+      <span className="text-xl">C</span>
+      ontact
+    </a>
+  </ul>
+);
+
+function DesktopNavbar() {
   return (
     <div className="hidden navbar-lg:flex bg-secondary font-cinzel text-primary/80 text-md font-medium px-5 rounded-3xl">
-      <ul className="flex flex-1 gap-16 items-center">
-        <MenuItems name={"experience"} />
-        <MenuItems name={"Darshana"} />
-        <MenuItems name={"Yatra"} />
-      </ul>
-      <Image
-        src={"/images/innerstep_full_logo.png"}
-        width={279}
-        height={49}
-        alt="Innerstep logo"
-      />
-      <ul className="flex flex-1 gap-16 items-center">
-        <MenuItems name={"Seva"} />
-        <MenuItems name={"Dana"} />
-        <MenuItems name={"Contact Us"} />
-      </ul>
+      <LeftSideMenu />
+      <Link href="/">
+        <Image
+          src="/images/innerstep_full_logo.png"
+          width={279}
+          height={49}
+          alt="Innerstep logo"
+        />
+      </Link>
+      <RightSideMenu />
     </div>
   );
 }
 
-export default Desktopnavbar;
+export default DesktopNavbar;
