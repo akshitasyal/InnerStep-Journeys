@@ -4,8 +4,17 @@ import FloatingWindow from "./floatingWindow";
 
 const MeditationBanner: React.FC = () => {
   return (
-    <section className="relative w-full">
+    <section className="relative w-full ">
       <FloatingWindow />
+
+      <div className="absolute top-0 left-0 translate-y-[-10%] ">
+        <Image
+          width={842}
+          height={1053}
+          src={"/svg/bg-vector.svg"}
+          alt="bg vector design"
+        />
+      </div>
 
       <div className="relative w-full">
         <Image
