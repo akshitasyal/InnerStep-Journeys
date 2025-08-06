@@ -6,6 +6,7 @@ import { experience } from "../lib/data/experience";
 import { yatra } from "../lib/data/yatra";
 import { seva } from "../lib/data/seva";
 import { dana } from "../lib/data/dana";
+import ActivitiesSection from "./activitiesSection";
 
 type ValidSections = "experience" | "darshana" | "yatra" | "seva" | "dana";
 
@@ -47,6 +48,12 @@ export default function SectionPage({
         serviceName={typedSection}
         heading={content.heading}
         subHeading={content.subHeading}
+      />
+
+      <ActivitiesSection
+        heading={content.activity.heading}
+        subHeading={content.activity.subHeading}
+        activities={content.activity.activity}
       />
     </div>
   );

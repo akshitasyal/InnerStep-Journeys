@@ -5,15 +5,17 @@ interface ServiceCardProps {
   title: string;
   description: string;
   imagePath: string;
+  className?: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
   imagePath,
+  className,
 }) => {
   return (
-    <div className="relative p-2 flex flex-col h-full">
+    <div className={`relative p-2 flex flex-col  ${className}`}>
       {/* Curved border at top */}
       <svg
         width="436"
@@ -44,9 +46,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 
       {/* Content with improved typography */}
       <div className="px-6 pb-6 z-10 flex-grow">
-        <h3 className="font-cinzel text-xl font-bold mb-5">
-          {title}
-        </h3>
+        <h3 className="font-cinzel text-xl font-bold mb-5">{title}</h3>
         <p className="font-alice text-sm text-gray-800">{description}</p>
       </div>
 
