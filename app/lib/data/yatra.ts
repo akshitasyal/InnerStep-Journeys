@@ -27,4 +27,11 @@ export const yatra: ServiceData = {
       },
     ],
   },
+  imageGallery: {
+    heading: "Every Yatra is a step toward the self. Let’s walk together.",
+    quote:
+      "“He who departs on this path of selfless action is not lost. Even a little progress protects one from great fear.”",
+    quoteAuthor: "“Neha abhikrama-nāśo ’sti pratyavāyo na vidyate”",
+    section: "Bhagavad Gita 2.14",
+  },
 };

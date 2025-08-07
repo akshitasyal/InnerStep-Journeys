@@ -23,4 +23,11 @@ export const experience: ServiceData = {
       },
     ],
   },
+  imageGallery: {
+    heading: "Let the experience awaken what’s already within.",
+    quote:
+      "“When the mind is controlled and rests in the Self alone, free from all desires, one is said to be truly steady in wisdom.”",
+    quoteAuthor: "“Prajahāti yadā kāmān sarvān pārtha manogatān...”",
+    section: "Bhagavad Gita 2.55",
+  },
 };

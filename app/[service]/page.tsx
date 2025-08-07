@@ -7,6 +7,8 @@ import { yatra } from "../lib/data/yatra";
 import { seva } from "../lib/data/seva";
 import { dana } from "../lib/data/dana";
 import ActivitiesSection from "./activitiesSection";
+import Image from "next/image";
+import ImageGallery from "./imageGallery";
 
 type ValidSections = "experience" | "darshana" | "yatra" | "seva" | "dana";
 
@@ -54,6 +56,24 @@ export default function SectionPage({
         heading={content.activity.heading}
         subHeading={content.activity.subHeading}
         activities={content.activity.activity}
+      />
+
+      <div className="flex justify-center mb-12 md:mb-30">
+        <Image
+          src="/svg/seperator.svg"
+          alt="Decorative element"
+          width={400}
+          height={30}
+          className="h-8 w-auto"
+        />
+      </div>
+
+      <ImageGallery
+        serviceName={typedSection}
+        heading={content.imageGallery.heading}
+        quote={content.imageGallery.quote}
+        quoteAuthor={content.imageGallery.quoteAuthor}
+        section={content.imageGallery.section}
       />
     </div>
   );

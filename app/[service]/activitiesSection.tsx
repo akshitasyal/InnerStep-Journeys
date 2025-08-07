@@ -32,6 +32,8 @@ function ActivitiesSection({
           />
         ))}
       </div>
+
+
     </div>
   );
 }

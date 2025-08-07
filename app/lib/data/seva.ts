@@ -23,4 +23,11 @@ export const seva: ServiceData = {
       },
     ],
   },
+  imageGallery: {
+    heading: "Because when you serve with love, you receive grace in return..",
+    quote:
+      "“He who performs his duty without attachment, surrendering the results unto the Supreme, is unaffected by sinful action”",
+    quoteAuthor: "“Brahmaṇy ādhāya karmāṇi saṅgaṁ tyaktvā karoti yaḥ”",
+    section: "Bhagavad Gita 5.10",
+  },
 };

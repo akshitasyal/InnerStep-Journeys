@@ -27,4 +27,11 @@ export const dana: ServiceData = {
       },
     ],
   },
+  imageGallery: {
+    heading: "Because sometimes, one glance is enough to feel the divine.",
+    quote:
+      "“In whatever way people surrender unto Me, I reciprocate accordingly.”",
+    quoteAuthor: "“Ye yathā māṁ prapadyante tāṁs tathaiva bhajāmy aham”",
+    section: "Bhagavad Gita 4.11",
+  },
 };

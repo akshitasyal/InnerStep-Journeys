@@ -17,6 +17,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <div className={`relative p-2 flex flex-col  ${className}`}>
       {/* Curved border at top */}
+      
       <svg
         width="436"
         height="134"
