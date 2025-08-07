@@ -33,7 +33,7 @@ function ImageGallery({
             <Image
               width={1024}
               height={760}
-              alt="gallery Image 1"
+              alt="gallery Image 2"
               className="rounded-4xl shadow-md shadow-primary lg:max-h-55"
               src={`/images/${serviceName}/galleryImage2.png`}
             />
@@ -42,14 +42,14 @@ function ImageGallery({
             <Image
               width={1024}
               height={760}
-              alt="gallery Image 1"
+              alt="gallery Image 3"
               className="rounded-4xl shadow-md shadow-primary"
               src={`/images/${serviceName}/galleryImage3.png`}
             />
             <Image
               width={1024}
               height={760}
-              alt="gallery Image 1"
+              alt="gallery Image 4"
               className="rounded-4xl shadow-md shadow-primary"
               src={`/images/${serviceName}/galleryImage4.png`}
             />
@@ -58,14 +58,14 @@ function ImageGallery({
             <Image
               width={1024}
               height={760}
-              alt="gallery Image 1"
+              alt="gallery Image 5"
               className="rounded-4xl shadow-md shadow-primary object-cover"
               src={`/images/${serviceName}/galleryImage5.png`}
             />
             <Image
               width={1024}
               height={760}
-              alt="gallery Image 1"
+              alt="gallery Image 6"
               className="rounded-4xl shadow-md shadow-primary"
               src={`/images/${serviceName}/galleryImage6.png`}
             />
