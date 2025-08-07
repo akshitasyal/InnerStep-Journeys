@@ -9,6 +9,7 @@ import { dana } from "../lib/data/dana";
 import ActivitiesSection from "./activitiesSection";
 import Image from "next/image";
 import ImageGallery from "./imageGallery";
+import ContanctUsForm from "../components/contanctUsForm";
 
 type ValidSections = "experience" | "darshana" | "yatra" | "seva" | "dana";
 
@@ -75,6 +76,8 @@ export default function SectionPage({
         quoteAuthor={content.imageGallery.quoteAuthor}
         section={content.imageGallery.section}
       />
+
+      <ContanctUsForm className="my-20" />
     </div>
   );
 }
