@@ -14,6 +14,9 @@ function FooterNavigationLinks({ links }: { links: string[] }) {
             {link}
           </Link>
         ))}
+        <a href="#contact" className="py-2 cursor-pointer">
+          Contact Us
+        </a>
       </ul>
     </div>
   );

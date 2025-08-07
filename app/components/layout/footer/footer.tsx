@@ -29,7 +29,7 @@ function Footer() {
     "Dana",
     "Darshana",
     "Experience",
-    "Contact Us",
+    
   ];
 
   return (
