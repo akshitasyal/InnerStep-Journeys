@@ -29,12 +29,13 @@ const contentMap: Record<ValidSections, ServiceData> = {
   dana,
 };
 
-export default function SectionPage({
+export default async function SectionPage({
   params,
 }: {
-  params: { service: string };
+  params: Promise<{ service: string }>;
 }) {
-  const section = params.service.toLowerCase();
+  const actualParams = await params;
+  const section = actualParams.service.toLowerCase();
 
   const isValidSection = allowedSections.includes(section as ValidSections);
 
