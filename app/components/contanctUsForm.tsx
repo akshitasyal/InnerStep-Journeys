@@ -1,9 +1,12 @@
 import Image from "next/image";
 import React from "react";
 
-function ContanctUsForm() {
+function ContanctUsForm({ className }: { className?: string }) {
   return (
-    <div className="w-full flex flex-col lg:flex-row" id="contact">
+    <div
+      className={"w-full flex flex-col lg:flex-row " + className}
+      id="contact"
+    >
       <Image
         className="flex-1 w-screen lg:h-full h-[10px] "
         src="/images/contactUsImage.png"
