@@ -11,7 +11,7 @@ function ServiceBanner({
   subHeading: string;
 }) {
   return (
-    <div className="relative h-screen">
+    <div className="relative w-full h-screen">
       <Image
         alt={`${serviceName} Banner Image`}
         fill
@@ -19,7 +19,7 @@ function ServiceBanner({
         className="w-full h-full object-cover"
       />
       <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t to-transparent from-secondary min-h-[50%] flex flex-col justify-end items-center p-10">
-        <h1 className="font-cinzel text-center text-primary font-bold text-5xl">
+        <h1 className="font-cinzel text-center text-primary font-bold text-3xl md:text-5xl">
           {heading}
         </h1>
         <h2 className="font-alice text-center text-xl max-w-190 mx-auto mt-5">
