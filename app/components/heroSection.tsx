@@ -4,7 +4,7 @@ import { BiVolumeMute } from "react-icons/bi";
 import { FaVolumeUp } from "react-icons/fa";
 
 function HeroSection() {
-  const [muted, setMuted] = useState<Boolean>(true);
+  const [muted, setMuted] = useState<boolean>(true);
   const videoPlayer = useRef<HTMLVideoElement>(null);
   const handleUnmute = () => {
     if (videoPlayer.current) {
