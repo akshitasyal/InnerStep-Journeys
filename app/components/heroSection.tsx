@@ -29,7 +29,7 @@ function HeroSection() {
         <source src="/videos/heroSectionVideo.mp4" type="video/mp4" />
       </video>
       <div
-        className="absolute top-10 right-10 bg-black/30 p-2  md:p-5 cursor-pointer"
+        className="absolute top-5 right-5 md:top-10 md:right-10 bg-black/30 p-2  md:p-5 cursor-pointer"
         onClick={handleUnmute}
       >
         {muted ? (
