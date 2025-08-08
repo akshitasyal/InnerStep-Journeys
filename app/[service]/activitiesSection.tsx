@@ -1,5 +1,6 @@
 import React from "react";
 import ServiceCard from "../components/whatWeOffer/ServiceCard";
+import Image from "next/image";
 
 function ActivitiesSection({
   heading,
@@ -11,7 +12,14 @@ function ActivitiesSection({
   activities: { src: string; title: string }[];
 }) {
   return (
-    <div className="p-10 md:p-30">
+    <div className=" relative overflow-y-visible p-10 md:p-30">
+      <Image
+        src="/svg/bg-vector.svg"
+        width={1024}
+        height={1024}
+        alt="background vector"
+        className="absolute left-0 top-0 translate-x-[-20%] "
+      />
       <div className="text-center flex flex-col items-center mb-12">
         <h2 className="font-cinzel text-4xl font-bold text-primary">
           {heading}
@@ -32,8 +40,6 @@ function ActivitiesSection({
           />
         ))}
       </div>
-
-
     </div>
   );
 }
