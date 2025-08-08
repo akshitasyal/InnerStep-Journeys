@@ -15,7 +15,31 @@ function ImageGallery({
   section: string;
 }) {
   return (
-    <div className="flex flex-col">
+    <div className="relative flex flex-col">
+      <Image
+        src="/svg/bg-vector.svg"
+        width={700}
+        height={700}
+        alt="background vector"
+        className="absolute right-0 top-0 translate-y-[-60%] rotate-180 "
+      />
+
+      <Image
+        src="/svg/bg-vector2.svg"
+        width={500}
+        height={500}
+        alt="background vector"
+        className="absolute right-0 bottom-0 translate-y-[38%] "
+      />
+
+      <Image
+        src="/svg/bg-vector3.svg"
+        width={500}
+        height={500}
+        alt="background vector"
+        className="absolute left-0 bottom-0 translate-y-[38%] "
+      />
+
       <h2 className="font-cinzel text-center text-4xl font-bold text-primary ">
         {heading}
       </h2>
