@@ -4,6 +4,13 @@ import React from "react";
 const Welcome: React.FC = () => {
   return (
     <section className="py-16 relative">
+      <Image
+        src="/svg/bg-vector.svg"
+        width={800}
+        height={800}
+        alt="background vector"
+        className="absolute right-0 bottom-0 rotate-180 translate-[10%] "
+      />
       <div className="container mx-auto px-4">
         {/* Decorative element at top */}
         <div className="flex justify-center mb-12 md:mb-30">
