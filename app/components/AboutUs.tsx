@@ -66,6 +66,13 @@ const AboutUs: React.FC = () => {
           />
         </div>
       </div>
+      <Image
+        src="/svg/bg-vector.svg"
+        alt="background vector"
+        width={700}
+        height={700}
+        className="absolute bottom-0 right-0 rotate-180  z-[-1]"
+      />
     </section>
   );
 };
