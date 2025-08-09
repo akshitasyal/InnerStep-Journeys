@@ -64,7 +64,7 @@ const WhatWeOffer: React.FC = () => {
         alt="background vector"
         width={800}
         height={800}
-        className="absolute top-0 right-0 translate-y-[-40%]"
+        className="absolute top-0 right-0 translate-y-[-30%] "
       />
 
       <div className="container mx-auto px-4">
