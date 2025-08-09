@@ -4,7 +4,23 @@ import styles from "./style.module.css";
 
 const FeaturedDestination: React.FC = () => {
   return (
-    <section className=" py-16 relative overflow-hidden">
+    <section className=" py-16 relative">
+      <Image
+        src="/svg/bg-vector3.svg"
+        alt="background vector"
+        width={1000}
+        height={1000}
+        className="absolute top-0 right-0 rotate-180 translate-y-[-60%] z-[-1]"
+      />
+
+      <Image
+        src="/svg/bg-vector2.svg"
+        alt="background vector"
+        width={800}
+        height={800}
+        className="absolute top-0 left-0  translate-y-[-40%] z-[-1]"
+      />
+
       {/* Background pattern - optional */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="w-full h-full bg-[url('/svg/bg-vector.svg')] bg-repeat opacity-30"></div>
