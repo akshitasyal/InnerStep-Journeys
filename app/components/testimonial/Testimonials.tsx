@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import TestimonialCard from "./TestimonialCard";
+import Image from "next/image";
 
 interface TestimonialData {
   imageUrl: string;
@@ -108,7 +109,7 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <section className="py-16 md:my-30">
+    <section className="relative py-16 md:my-30">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-cinzel font-bold text-primary text-center mb-12">
           Real Stories. Real Transformation.
@@ -142,6 +143,13 @@ const Testimonials: React.FC = () => {
           ))}
         </div>
       </div>
+      <Image
+        src="/svg/bg-vector.svg"
+        alt="background vector"
+        width={800}
+        height={800}
+        className="absolute bottom-0 left-0 rotate-180 translate-y-[-15%] translate-x-[-25%]  z-[-1]"
+      />
     </section>
   );
 };
