@@ -62,9 +62,9 @@ const WhatWeOffer: React.FC = () => {
       <Image
         src="/svg/bg-vector2.svg"
         alt="background vector"
-        width={800}
-        height={800}
-        className="absolute top-0 right-0 translate-y-[-30%] "
+        width={600}
+        height={600}
+        className="absolute top-0 right-0 translate-y-[-10%] "
       />
 
       <div className="container mx-auto px-4">
