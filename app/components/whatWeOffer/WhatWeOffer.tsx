@@ -48,8 +48,24 @@ const WhatWeOffer: React.FC = () => {
   ];
 
   return (
-    <section className=" py-16 relative overflow-hidden">
+    <section className=" py-16 relative">
       {/* Background pattern with temple silhouettes */}
+
+      <Image
+        src="/svg/bg-vector3.svg"
+        alt="background vector"
+        width={1000}
+        height={1000}
+        className="absolute top-0 left-0 translate-y-[-50%]"
+      />
+
+      <Image
+        src="/svg/bg-vector2.svg"
+        alt="background vector"
+        width={1000}
+        height={1000}
+        className="absolute top-0 right-0 translate-y-[-40%]"
+      />
 
       <div className="container mx-auto px-4">
         {/* Decorative element at top */}
