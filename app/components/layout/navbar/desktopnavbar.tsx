@@ -28,7 +28,10 @@ const RightSideMenu = () => (
 
 function DesktopNavbar() {
   return (
-    <div className="hidden navbar-lg:flex bg-secondary font-cinzel text-primary/80 text-md font-medium px-5 rounded-3xl">
+    <div
+      className="hidden navbar-lg:flex bg-secondary font-cinzel text-primary/80 text-md font-medium px-5 border-1 border-primary rounded-3xl shadow-primary"
+      style={{ boxShadow: "0px 2px 4px" }}
+    >
       <LeftSideMenu />
       <Link href="/">
         <Image
