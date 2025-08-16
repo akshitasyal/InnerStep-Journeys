@@ -21,6 +21,11 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+
+      <script
+        src={`//code.tidio.co/${process.env.NEXT_PUBLIC_TIDIO_API_KEY}.js`}
+        async
+      ></script>
     </html>
   );
 }
