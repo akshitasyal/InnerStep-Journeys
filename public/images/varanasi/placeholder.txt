@@ -1,0 +1,7 @@
+This directory will contain images for the Varanasi page:
+- varanasi-hero.jpg
+- kashi-vishwanath.jpg
+- dashashwamedh-ghat.jpg
+- sarnath.jpg
+
+Please add appropriate images to this directory.

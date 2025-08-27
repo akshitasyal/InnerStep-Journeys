@@ -1,0 +1,7 @@
+This directory will contain images for the Ujjain page:
+- ujjain-hero.jpg
+- mahakaleshwar-temple.jpg
+- kal-bhairav-temple.jpg
+- sandipani-ashram.jpg
+
+Please add appropriate images to this directory.

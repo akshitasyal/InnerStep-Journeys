@@ -7,7 +7,7 @@ const WhatWeOffer: React.FC = () => {
   const services = [
     {
       id: 1,
-      title: "Personalised Travel Assistance",
+      title: "Vrindavan- The land of krishna's leela",
       description:
         "From arrival to darshan, we guide you every step with care and devotion.",
       imagePath: "/images/serviceImage1.png",

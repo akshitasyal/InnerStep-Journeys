@@ -11,19 +11,23 @@ export const yatra: ServiceData = {
     activity: [
       {
         src: "/images/yatra/activityImage1.png",
-        title: "Customised batch-wise group travel",
+        title: "Vrindavan-The Land of Krishna's Leelas",
+        link:"/yatra/vrindavan"
       },
       {
         src: "/images/yatra/activityImage2.png",
-        title: "Ideal for schools, senior citizens, women’s groups",
+        title: "Varanasi-The Eternal City",
+        link:"/yatra/varanasi"
       },
       {
         src: "/images/yatra/activityImage3.png",
-        title: "Guided spiritual itineraries",
+        title: "Ujjain-The Jyotirlinga of Time",
+        link:"/darshana/ujjain"
       },
       {
         src: "/images/yatra/activityImage4.png",
-        title: "Rooted in tradition, shaped by intention",
+        title: "Ujjain-The Jyotirlinga of Time",
+        link:"/darshana/ujjain"
       },
     ],
   },

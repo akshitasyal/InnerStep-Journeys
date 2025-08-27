@@ -15,7 +15,7 @@ const LeftSideMenu = () => (
 const RightSideMenu = () => (
   <ul className="flex flex-1 gap-16 items-center">
     <MenuItems name="Seva" />
-    <MenuItems name="Dana" />
+    
     <a
       href="#contact"
       className="uppercase cursor-pointer py-0.5 rounded-2xl px-3 hover:text-primary"

@@ -1,160 +1,46 @@
 import Image from "next/image";
 import React from "react";
-import styles from "./style.module.css";
+import Link from "next/link";
 
 const FeaturedDestination: React.FC = () => {
+  const destinations = [
+    { name: "Vrindavan-The Land of Krishna’s Leelas", image: "/images/vrindavan-icon.jpg", path: "/yatra/vrindavan" },
+    { name: "Ujjain- The Jyotirlinga of Time", image: "/images/ujjain-icon.jpg", path: "/yatra/ujjain" },
+    { name: "Kashi (Varanasi) – The Eternal City", image: "/images/varanasi-icon.jpg", path: "/yatra/varanasi" },
+    { name: "Rishikesh - The Yoga Capital", image: "/images/rishikesh-icon.jpg", path: "/yatra/rishikesh" },
+  ];
+  
+  // Force refresh of component
+
   return (
-    <section className=" py-16 relative">
-      <Image
-        src="/svg/bg-vector3.svg"
-        alt="background vector"
-        width={1000}
-        height={1000}
-        className="absolute top-0 right-0 rotate-180 translate-y-[-60%] z-[-1]"
-      />
-
-      <Image
-        src="/svg/bg-vector2.svg"
-        alt="background vector"
-        width={800}
-        height={800}
-        className="absolute top-0 left-0  translate-y-[-40%] z-[-1]"
-      />
-
-      {/* Background pattern - optional */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="w-full h-full bg-[url('/svg/bg-vector.svg')] bg-repeat opacity-30"></div>
-      </div>
-
+    <section className="py-16 relative">
       <div className="container mx-auto px-4">
-        {/* Heading with improved spacing */}
         <div className="text-center mb-12">
           <p className="text-primary font-cinzel text-sm md:text-base uppercase tracking-wider mb-3">
             FEATURED SACRED DESTINATION
           </p>
           <h2 className="font-cinzel text-primary text-3xl md:text-5xl font-bold">
-            VRINDAVAN RETREATS
+            PILGRIMAGE YATRAS
           </h2>
         </div>
 
-        {/* Image Grid - Using CSS module styles with improved container */}
-        <div className="flex justify-center w-full">
-          <div className={`${styles["grid-container"]}`}>
-            {/* First row */}
-            <div
-              className={`${styles["grid-item"]} ${styles.item1} transform transition-transform duration-300 hover:scale-[1.02]`}
-            >
-              <Image
-                src="/images/sacredPlacesImage1.png"
-                alt="Celebration in Vrindavan"
-                width={1024}
-                height={720}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-
-            {/* Rest of the grid items remain the same */}
-            <div
-              className={`${styles["grid-item"]} ${styles.item2} transform transition-transform duration-300 hover:scale-[1.02]`}
-            >
-              <Image
-                src="/images/sacredPlacesImage2.png"
-                alt="Shiva statue"
-                width={1024}
-                height={720}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-            <div
-              className={`${styles["grid-item"]} ${styles.item3} transform transition-transform duration-300 hover:scale-[1.02]`}
-            >
-              <Image
-                src="/images/sacredPlacesImage3.png"
-                alt="Temple entrance with checkered floor"
-                width={1024}
-                height={600}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-            <div
-              className={`${styles["grid-item"]} ${styles.item4} transform transition-transform duration-300 hover:scale-[1.02]`}
-            >
-              <Image
-                src="/images/sacredPlacesImage4.png"
-                alt="View from boat"
-                width={1024}
-                height={720}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-
-            {/* Second row */}
-            <div
-              className={`${styles["grid-item"]} ${styles.item5} transform transition-transform duration-300 hover:scale-[1.02]`}
-            >
-              <Image
-                src="/images/sacredPlacesImage5.png"
-                alt="Temple architecture"
-                width={1024}
-                height={720}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-            <div
-              className={`${styles["grid-item"]} ${styles.item6} transform transition-transform duration-300 hover:scale-[1.02]`}
-            >
-              <Image
-                src="/images/sacredPlacesImage6.png"
-                alt="Boat ride on river"
-                width={1024}
-                height={720}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-            <div
-              className={`${styles["grid-item"]} ${styles.item7} transform transition-transform duration-300 hover:scale-[1.02]`}
-            >
-              <Image
-                src="/images/sacredPlacesImage7.png"
-                alt="Child during Holi festival"
-                width={1024}
-                height={720}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-            <div
-              className={`${styles["grid-item"]} ${styles.item8} transform transition-transform duration-300 hover:scale-[1.02]`}
-            >
-              <Image
-                src="/images/sacredPlacesImage8.png"
-                alt="Elderly woman in traditional dress"
-                width={1024}
-                height={720}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-            <div
-              className={`${styles["grid-item"]} ${styles.item9} transform transition-transform duration-300 hover:scale-[1.02]`}
-            >
-              <Image
-                src="/images/sacredPlacesImage9.png"
-                alt="Sadhu with traditional items"
-                width={1024}
-                height={720}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-            <div
-              className={`${styles["grid-item"]} ${styles.item10} transform transition-transform duration-300 hover:scale-[1.02]`}
-            >
-              <Image
-                src="/images/sacredPlacesImage10.png"
-                alt="Sadhu with traditional items"
-                width={1024}
-                height={720}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
+        <div className="flex justify-center">
+          <div className="grid grid-cols-4 gap-8 w-full max-w-5xl">
+            {destinations.map((destination) => (
+              <Link href={destination.path} key={destination.name} className="group text-center">
+                <div className="pt-10 pb-6">  {/* Added padding top for space above icon */}
+                  <div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
+                    <Image
+                      src={destination.image}
+                      alt={destination.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <h3 className="font-cinzel text-xl text-primary">{destination.name}</h3>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
