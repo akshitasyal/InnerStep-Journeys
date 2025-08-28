@@ -5,20 +5,19 @@ import { ServiceData } from "../lib/data/type";
 import { experience } from "../lib/data/experience";
 import { yatra } from "../lib/data/yatra";
 import { seva } from "../lib/data/seva";
-import { dana } from "../lib/data/dana";
 import ActivitiesSection from "./activitiesSection";
 import Image from "next/image";
 import ImageGallery from "./imageGallery";
 import ContanctUsForm from "../components/contanctUsForm";
+import DonationSection from "../components/DonationSection";
 
-type ValidSections = "experience" | "darshana" | "yatra" | "seva" | "dana";
+type ValidSections = "experience" | "darshana" | "yatra" | "seva";
 
 const allowedSections: ValidSections[] = [
   "experience",
   "darshana",
   "yatra",
   "seva",
-  "dana",
 ];
 
 const contentMap: Record<ValidSections, ServiceData> = {
@@ -26,7 +25,6 @@ const contentMap: Record<ValidSections, ServiceData> = {
   experience,
   yatra,
   seva,
-  dana,
 };
 
 export default async function SectionPage({
@@ -70,6 +68,11 @@ export default async function SectionPage({
           className="h-8 w-auto"
         />
       </div>
+
+      {/* Show DonationSection only on the seva page */}
+      {typedSection === "seva" && (
+        <DonationSection className="mb-12" />
+      )}
 
       <ImageGallery
         serviceName={typedSection}

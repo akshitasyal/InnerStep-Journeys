@@ -2,10 +2,12 @@ interface AcitvityType {
   heading: string;
   subHeading: string;
   activity: {
-    src: string;
+    src?: string;
     title: string;
+    description?: string;
+    includes?: string[];
+    link?: string;
   }[];
-  
 }
 
 export interface ServiceData {

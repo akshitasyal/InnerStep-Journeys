@@ -14,7 +14,6 @@ export default function Home() {
       <MeditationBanner />
       <Welcome />
       <WhatWeOffer />
-      <FeaturedDestination />
       <AboutUs />
       <Testimonials />
       <ContanctUsForm />
