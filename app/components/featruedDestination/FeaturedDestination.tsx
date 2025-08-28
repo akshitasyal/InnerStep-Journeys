@@ -15,15 +15,7 @@ const FeaturedDestination: React.FC = () => {
   return (
     <section className="py-16 relative">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <p className="text-primary font-cinzel text-sm md:text-base uppercase tracking-wider mb-3">
-            FEATURED SACRED DESTINATION
-          </p>
-          <h2 className="font-cinzel text-primary text-3xl md:text-5xl font-bold">
-            PILGRIMAGE YATRAS
-          </h2>
-        </div>
-
+      
         <div className="flex justify-center">
           <div className="grid grid-cols-4 gap-8 w-full max-w-5xl">
             {destinations.map((destination) => (

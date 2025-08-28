@@ -5,16 +5,7 @@ const AboutUs: React.FC = () => {
   return (
     <section className=" py-16 relative">
       <div className="container mx-auto px-4">
-        {/* Decorative element at top */}
-        <div className="flex justify-center mb-12 md:mb-30">
-          <Image
-            src="/svg/seperator.svg"
-            alt="Decorative element"
-            width={400}
-            height={30}
-            className="h-8 w-auto"
-          />
-        </div>
+
 
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
           {/* Text content */}

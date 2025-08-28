@@ -50,7 +50,7 @@ export const experience: ServiceData = {
         title: "Guru Milap",
         description: "A rare opportunity to meet revered spiritual masters.",
         includes: [
-          "Audiences and blessings with saints such as Swami Premanand Bageshwar ji.",
+          "Satsang and seek blessings from gurus like Swami Premanand Ji.",
           "Discourses and satsangs to deepen your spiritual journey."
         ]
       },

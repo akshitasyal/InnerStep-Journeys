@@ -26,8 +26,8 @@ export const yatra: ServiceData = {
       },
       {
         src: "/images/yatra/activityImage4.png",
-        title: "Ujjain-The Jyotirlinga of Time",
-        link:"/darshana/ujjain"
+           title: "Rishikesh-The Yoga Capital",
+        link:"/darshana/rishikesh"
       },
     ],
   },

@@ -24,11 +24,6 @@ export const seva: ServiceData = {
      
         title: "Service with Purpose",
         description: "Engage in community Seva by supporting local schools, planting trees or contributing to causes that uplift life around sacred sites. In our scriptures, such acts reflect the principle of working for the welfare of society as taught in the Bhagavad Gita."
-      },
-      {
-        title: "View Daan Opportunities",
-        description: "Explore our sacred giving opportunities including Anna Daan (nourishing the hungry), Vidya Daan (gift of knowledge), and cause-based contributions that serve society.",
-        link: "/dana"
       }
     ],
   },

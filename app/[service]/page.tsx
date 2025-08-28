@@ -9,6 +9,7 @@ import ActivitiesSection from "./activitiesSection";
 import Image from "next/image";
 import ImageGallery from "./imageGallery";
 import ContanctUsForm from "../components/contanctUsForm";
+import DonationSection from "../components/DonationSection";
 
 type ValidSections = "experience" | "darshana" | "yatra" | "seva";
 
@@ -67,6 +68,11 @@ export default async function SectionPage({
           className="h-8 w-auto"
         />
       </div>
+
+      {/* Show DonationSection only on the seva page */}
+      {typedSection === "seva" && (
+        <DonationSection className="mb-12" />
+      )}
 
       <ImageGallery
         serviceName={typedSection}

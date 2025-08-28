@@ -1,4 +1,3 @@
-import React from 'react';
 import FeaturedDestination from '../components/featruedDestination/FeaturedDestination';
 import ContanctUsForm from '../components/contanctUsForm';
 import Image from 'next/image';
@@ -7,7 +6,6 @@ import ImageGallery from '../[service]/imageGallery';
 export default function YatraPage() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
@@ -18,17 +16,16 @@ export default function YatraPage() {
             priority
           />
         </div>
-        <div className="relative z-10 text-center text-primary px-4">
-          <h1 className="font-cinzel text-4xl md:text-6xl font-bold mb-4">
+        <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t to-transparent from-secondary min-h-[50%] flex flex-col justify-end items-center p-10">
+          <h1 className="font-cinzel text-center text-primary font-bold text-3xl md:text-5xl">
             Sacred Yatras
           </h1>
-          <p className="font-alice text-xl md:text-2xl max-w-3xl mx-auto">
+          <p className="font-alice text-center text-xl max-w-3xl mx-auto mt-5">
             Journey to India's most sacred destinations
           </p>
         </div>
       </section>
 
-      {/* Introduction Section */}
       <section className="py-16 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -55,10 +52,12 @@ export default function YatraPage() {
         </div>
       </section>
 
-      {/* Featured Destinations */}
+      <div className="text-center mb-6">
+        <p className="font-alice text-xl text-primary italic">Click on your favourite destination to explore the itinerary.</p>
+      </div>
       <FeaturedDestination />
       
-      <div className="flex justify-center mb-12 md:mb-30">
+      <div className="flex justify-center mb-12">
         <Image
           src="/svg/seperator.svg"
           alt="Decorative element"
@@ -68,7 +67,6 @@ export default function YatraPage() {
         />
       </div>
       
-      {/* Image Gallery Section */}
       <ImageGallery
         serviceName="yatra"
         heading="Every Yatra is a step toward the self. Let's walk together."
@@ -77,7 +75,6 @@ export default function YatraPage() {
         section="Bhagavad Gita 2.14"
       />
       
-      {/* Contact Form */}
       <ContanctUsForm />
     </div>
   );
