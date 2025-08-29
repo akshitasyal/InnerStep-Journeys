@@ -1,7 +1,7 @@
-import FeaturedDestination from '../components/featruedDestination/FeaturedDestination';
-import ContanctUsForm from '../components/contanctUsForm';
-import Image from 'next/image';
-import ImageGallery from '../[service]/imageGallery';
+import FeaturedDestination from "../components/featruedDestination/FeaturedDestination";
+import ContanctUsForm from "../components/contanctUsForm";
+import Image from "next/image";
+import ImageGallery from "../[service]/imageGallery";
 
 export default function YatraPage() {
   return (
@@ -21,7 +21,7 @@ export default function YatraPage() {
             Sacred Yatras
           </h1>
           <p className="font-alice text-center text-xl max-w-3xl mx-auto mt-5">
-            Journey to India's most sacred destinations
+            Journey to India&apos;s most sacred destinations
           </p>
         </div>
       </section>
@@ -31,12 +31,16 @@ export default function YatraPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="font-alice text-base md:text-lg space-y-4">
               <p>
-                 At InnerStep every Yatra blends devotion with comfort - ensuring a safe, women and elder-friendly spiritual journey. With guided rituals and moments of reflection, we invite you to walk paths 
-                where divinity still breathes, stories live on and the soul awakens.
+                At InnerStep every Yatra blends devotion with comfort - ensuring
+                a safe, women and elder-friendly spiritual journey. With guided
+                rituals and moments of reflection, we invite you to walk paths
+                where divinity still breathes, stories live on and the soul
+                awakens.
               </p>
-            
+
               <p className="font-cinzel text-primary text-xl font-semibold">
-                Where every step becomes a prayer and every journey a step closer to the Divine.
+                Where every step becomes a prayer and every journey a step
+                closer to the Divine.
               </p>
             </div>
           </div>
@@ -53,10 +57,12 @@ export default function YatraPage() {
       </section>
 
       <div className="text-center mb-6">
-        <p className="font-alice text-xl text-primary italic">Click on your favourite destination to explore the itinerary.</p>
+        <p className="font-alice text-xl text-primary italic">
+          Click on your favourite destination to explore the itinerary.
+        </p>
       </div>
       <FeaturedDestination />
-      
+
       <div className="flex justify-center mb-12">
         <Image
           src="/svg/seperator.svg"
@@ -66,7 +72,7 @@ export default function YatraPage() {
           className="h-8 w-auto"
         />
       </div>
-      
+
       <ImageGallery
         serviceName="yatra"
         heading="Every Yatra is a step toward the self. Let's walk together."
@@ -74,7 +80,7 @@ export default function YatraPage() {
         quoteAuthor="Neha abhikrama-naso 'sti pratyavayo na vidyate"
         section="Bhagavad Gita 2.14"
       />
-      
+
       <ContanctUsForm />
     </div>
   );
