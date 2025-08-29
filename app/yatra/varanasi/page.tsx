@@ -45,7 +45,7 @@ const VaranasiPage = () => {
             </h2>
             <div className="font-alice text-base md:text-lg space-y-4">
               <p>
-                Varanasi, one of the world's oldest continuously inhabited cities, is a place where time seems to stand still. 
+                Varanasi, one of the world&apos;s oldest continuously inhabited cities, is a place where time seems to stand still. 
                 Known as the spiritual capital of India, this ancient city on the banks of the sacred Ganges River has been a center of learning, culture, and spirituality for thousands of years.
               </p>
               <p>
@@ -86,7 +86,7 @@ const VaranasiPage = () => {
                     <li>Traditional welcome at a heritage stay</li>
                     <li>First experience of the sacred Ganges River</li>
                     <li>Witnessing the mesmerizing Ganga Aarti ceremony</li>
-                    <li>Introduction to Varanasi's spiritual atmosphere</li>
+                    <li>Introduction to Varanasi&apos;s spiritual atmosphere</li>
                   </ul>
                 </div>
               </div>
@@ -116,7 +116,7 @@ const VaranasiPage = () => {
                   <h4 className="font-cinzel text-primary text-xl font-bold mb-3">Highlights:</h4>
                   <ul className="font-alice list-disc pl-5 space-y-2">
                     <li>Magical sunrise boat ride on the Ganges</li>
-                    <li>Darshan at Kashi Vishwanath, one of India's most sacred temples</li>
+                    <li>Darshan at Kashi Vishwanath, one of India&apos;s most sacred temples</li>
                     <li>Exploration of ancient lanes and hidden temples</li>
                     <li>Spiritual discourse on the Bhagavad Gita</li>
                   </ul>
@@ -134,7 +134,7 @@ const VaranasiPage = () => {
               <div className="p-6">
                 <div className="font-alice space-y-4">
                   <p>
-                    <strong>Morning:</strong> Begin your morning with meditation by the Ganga, letting the river's eternal flow quiet the soul.
+                    <strong>Morning:</strong> Begin your morning with meditation by the Ganga, letting the river&apos;s eternal flow quiet the soul.
                   </p>
                   <p>
                     <strong>Afternoon:</strong> Journey to Sarnath, the sacred ground where Lord Buddha shared his first sermon, a place of stillness and awakening.
@@ -148,7 +148,7 @@ const VaranasiPage = () => {
                   <h4 className="font-cinzel text-primary text-xl font-bold mb-3">Highlights:</h4>
                   <ul className="font-alice list-disc pl-5 space-y-2">
                     <li>Peaceful meditation by the sacred Ganges</li>
-                    <li>Visit to Sarnath, one of Buddhism's most holy sites</li>
+                    <li>Visit to Sarnath, one of Buddhism&apos;s most holy sites</li>
                     <li>Viewing the famous Ashoka Pillar and Dhamek Stupa</li>
                     <li>Final blessings and farewell ceremony</li>
                   </ul>
@@ -163,7 +163,7 @@ const VaranasiPage = () => {
       <section className="py-16 relative">
         <div className="container mx-auto px-4">
           <h2 className="font-cinzel text-primary text-3xl md:text-4xl font-bold mb-10 text-center">
-            Sacred Places You'll Experience
+            Sacred Places You&apos;ll Experience
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -274,7 +274,7 @@ const VaranasiPage = () => {
                     <li>Reflect on life and death at Manikarnika Ghat</li>
                     <li>Experience the timelessness of Varanasi</li>
                     <li>Connect with both Shaivite and Buddhist traditions</li>
-                    <li>Find inner peace amidst the city's vibrant energy</li>
+                    <li>Find inner peace amidst the city&apos;s vibrant energy</li>
                   </ul>
                 </div>
               </div>

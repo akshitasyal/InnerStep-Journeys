@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { FaUser, FaPhone, FaEnvelope, FaHome, FaCalendarAlt, FaUsers, FaIdCard, FaFileUpload, FaCreditCard, FaCheckCircle, FaBuilding } from 'react-icons/fa';
 import ImageGallery from '../[service]/imageGallery';
-import Footer from '../components/layout/footer/footer';
 import { darshana } from '../lib/data/darshana';
 import ContanctUsForm from '../components/contanctUsForm';
 

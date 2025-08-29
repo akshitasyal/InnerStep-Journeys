@@ -46,7 +46,7 @@ const RishikeshPage = () => {
             <div className="font-alice text-base md:text-lg space-y-4">
               <p>
                 Rishikesh, where the sacred Ganges emerges from the Himalayas, has been a spiritual haven for seekers for centuries. 
-                This tranquil city, nestled between forested hills and the flowing river, is renowned as the 'Yoga Capital of the World'.
+                This tranquil city, nestled between forested hills and the flowing river, is renowned as the &apos;Yoga Capital of the World&apos;.
               </p>
               <p>
                 Our carefully crafted Rishikesh journey offers you an authentic experience of this holy city, 
@@ -89,7 +89,7 @@ const RishikeshPage = () => {
                     <li>Witnessing the divine Ganga Aarti at Triveni Ghat</li>
                     <li>Walking across the iconic suspension bridges of Rishikesh</li>
                     <li>First yoga and pranayama session by the Ganges</li>
-                    <li>Introduction to Rishikesh's spiritual atmosphere</li>
+                    <li>Introduction to Rishikesh&apos;s spiritual atmosphere</li>
                   </ul>
                 </div>
               </div>
@@ -111,7 +111,7 @@ const RishikeshPage = () => {
                     <strong>Mid-Morning:</strong> Return to the riverbanks for guided meditation by the Ganga, where the flow of water becomes a mantra of its own.
                   </p>
                   <p>
-                    <strong>Afternoon:</strong> Enrich your soul with a Bhagavad Gita discourse and explore the spiritual sanctuaries of Rishikesh's many ashrams.
+                    <strong>Afternoon:</strong> Enrich your soul with a Bhagavad Gita discourse and explore the spiritual sanctuaries of Rishikesh&apos;s many ashrams.
                   </p>
                 </div>
                 
@@ -121,7 +121,7 @@ const RishikeshPage = () => {
                     <li>Darshan at the sacred Neelkanth Mahadev Temple</li>
                     <li>Meditation practice by the flowing Ganges</li>
                     <li>Spiritual discourse on the Bhagavad Gita</li>
-                    <li>Exploring Rishikesh's renowned ashrams</li>
+                    <li>Exploring Rishikesh&apos;s renowned ashrams</li>
                   </ul>
                 </div>
               </div>
@@ -166,7 +166,7 @@ const RishikeshPage = () => {
       <section className="py-16 relative">
         <div className="container mx-auto px-4">
           <h2 className="font-cinzel text-primary text-3xl md:text-4xl font-bold mb-10 text-center">
-            Sacred Places You'll Experience
+            Sacred Places You&apos;ll Experience
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
