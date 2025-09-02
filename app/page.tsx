@@ -1,4 +1,4 @@
-import ContanctUsForm from "./components/contanctUsForm";
+import ContactUsForm from "./components/contactUsForm";
 import Testimonials from "./components/testimonial/Testimonials";
 import AboutUs from "./components/AboutUs";
 import WhatWeOffer from "./components/whatWeOffer/WhatWeOffer";
@@ -15,7 +15,7 @@ export default function Home() {
       <WhatWeOffer />
       <AboutUs />
       <Testimonials />
-      <ContanctUsForm />
+      <ContactUsForm />
     </>
   );
 }
