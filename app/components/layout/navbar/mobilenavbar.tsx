@@ -58,10 +58,10 @@ function Mobilenavbar() {
           <Link href="/seva" onClick={handleMenuClose}>
             Seva
           </Link>
-         
-          <a href="#contact" onClick={handleMenuClose}>
+
+          <Link href="#contact" onClick={handleMenuClose}>
             Contact
-          </a>
+          </Link>
         </nav>
       </div>
     </div>
