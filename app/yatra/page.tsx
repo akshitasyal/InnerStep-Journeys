@@ -1,5 +1,5 @@
 import FeaturedDestination from "../components/featruedDestination/FeaturedDestination";
-import ContanctUsForm from "../components/contanctUsForm";
+import ContactUsForm from "../components/contactUsForm";
 import Image from "next/image";
 import ImageGallery from "../[service]/imageGallery";
 
@@ -81,7 +81,7 @@ export default function YatraPage() {
         section="Bhagavad Gita 2.14"
       />
 
-      <ContanctUsForm />
+      <ContactUsForm />
     </div>
   );
 }

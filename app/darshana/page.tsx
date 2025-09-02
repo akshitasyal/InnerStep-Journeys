@@ -1,11 +1,23 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { FaUser, FaPhone, FaEnvelope, FaHome, FaCalendarAlt, FaUsers, FaIdCard, FaFileUpload, FaCreditCard, FaCheckCircle, FaBuilding } from 'react-icons/fa';
-import ImageGallery from '../[service]/imageGallery';
-import { darshana } from '../lib/data/darshana';
-import ContanctUsForm from '../components/contanctUsForm';
+import React, { useState } from "react";
+import Image from "next/image";
+import {
+  FaUser,
+  FaPhone,
+  FaEnvelope,
+  FaHome,
+  FaCalendarAlt,
+  FaUsers,
+  FaIdCard,
+  FaFileUpload,
+  FaCreditCard,
+  FaCheckCircle,
+  FaBuilding,
+} from "react-icons/fa";
+import ImageGallery from "../[service]/imageGallery";
+import { darshana } from "../lib/data/darshana";
+import ContactUsForm from "../components/contactUsForm";
 
 interface FormData {
   fullName: string;
@@ -24,79 +36,89 @@ interface FormData {
 
 export default function EasyDarshanPage() {
   const [formData, setFormData] = useState<FormData>({
-    fullName: '',
-    contactNumber: '',
-    email: '',
-    residentialAddress: '',
-    temple: '',
-    date: '',
+    fullName: "",
+    contactNumber: "",
+    email: "",
+    residentialAddress: "",
+    temple: "",
+    date: "",
     numberOfPersons: 1,
-    idProofType: '',
-    idProofNumber: '',
+    idProofType: "",
+    idProofNumber: "",
     idProofFile: null,
-    paymentMode: '',
-    confirmBooking: false
+    paymentMode: "",
+    confirmBooking: false,
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
-  const [submitError, setSubmitError] = useState('');
+  const [submitError, setSubmitError] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value, type } = e.target;
-    
-    if (type === 'checkbox') {
+
+    if (type === "checkbox") {
       const target = e.target as HTMLInputElement;
-      setFormData(prev => ({
+      setFormData((prev) => ({
         ...prev,
-        [name]: target.checked
+        [name]: target.checked,
       }));
-    } else if (name === 'numberOfPersons') {
-      setFormData(prev => ({
+    } else if (name === "numberOfPersons") {
+      setFormData((prev) => ({
         ...prev,
-        [name]: parseInt(value) || 1
+        [name]: parseInt(value) || 1,
       }));
     } else {
-      setFormData(prev => ({
+      setFormData((prev) => ({
         ...prev,
-        [name]: value
+        [name]: value,
       }));
     }
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
-      setFormData(prev => ({
+      setFormData((prev) => ({
         ...prev,
-        idProofFile: e.target.files![0]
+        idProofFile: e.target.files![0],
       }));
     }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitError('');
-    
+    setSubmitError("");
+
     // Validate form
-    if (!formData.fullName) return setSubmitError('Full name is required');
-    if (!formData.contactNumber) return setSubmitError('Contact number is required');
-    if (!formData.email) return setSubmitError('Email address is required');
-    if (!formData.residentialAddress) return setSubmitError('Residential address is required');
-    if (!formData.temple) return setSubmitError('Please select a temple');
-    if (!formData.date) return setSubmitError('Please select a date');
-    if (!formData.idProofType) return setSubmitError('Please select ID proof type');
-    if (!formData.idProofNumber) return setSubmitError('ID proof number is required');
-    if (!formData.paymentMode) return setSubmitError('Please select payment mode');
-    if (!formData.confirmBooking) return setSubmitError('Please confirm your booking');
+    if (!formData.fullName) return setSubmitError("Full name is required");
+    if (!formData.contactNumber)
+      return setSubmitError("Contact number is required");
+    if (!formData.email) return setSubmitError("Email address is required");
+    if (!formData.residentialAddress)
+      return setSubmitError("Residential address is required");
+    if (!formData.temple) return setSubmitError("Please select a temple");
+    if (!formData.date) return setSubmitError("Please select a date");
+    if (!formData.idProofType)
+      return setSubmitError("Please select ID proof type");
+    if (!formData.idProofNumber)
+      return setSubmitError("ID proof number is required");
+    if (!formData.paymentMode)
+      return setSubmitError("Please select payment mode");
+    if (!formData.confirmBooking)
+      return setSubmitError("Please confirm your booking");
 
     try {
       setIsSubmitting(true);
-      
+
       // Submit form data to API
-      const response = await fetch('/api/darshan-booking', {
-        method: 'POST',
+      const response = await fetch("/api/darshan-booking", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           ...formData,
@@ -105,32 +127,34 @@ export default function EasyDarshanPage() {
       });
 
       const data = await response.json();
-      
+
       if (!response.ok) {
-        throw new Error(data.message || 'Something went wrong');
+        throw new Error(data.message || "Something went wrong");
       }
-      
+
       // Show confirmation message
       setShowConfirmation(true);
-      
+
       // Reset form
       setFormData({
-        fullName: '',
-        contactNumber: '',
-        email: '',
-        residentialAddress: '',
-        temple: '',
-        date: '',
+        fullName: "",
+        contactNumber: "",
+        email: "",
+        residentialAddress: "",
+        temple: "",
+        date: "",
         numberOfPersons: 1,
-        idProofType: '',
-        idProofNumber: '',
+        idProofType: "",
+        idProofNumber: "",
         idProofFile: null,
-        paymentMode: '',
-        confirmBooking: false
+        paymentMode: "",
+        confirmBooking: false,
       });
     } catch (error) {
-      console.error('Error submitting form:', error);
-      setSubmitError(error instanceof Error ? error.message : 'Failed to submit booking');
+      console.error("Error submitting form:", error);
+      setSubmitError(
+        error instanceof Error ? error.message : "Failed to submit booking"
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -178,7 +202,8 @@ export default function EasyDarshanPage() {
               <div className="h-px w-12 bg-[#923C1E]"></div>
             </div>
             <p className="text-gray-600 max-w-2xl mx-auto font-alice text-lg">
-              Complete the form below to schedule your temple visit. Our team will ensure a smooth and hassle-free darshan experience.
+              Complete the form below to schedule your temple visit. Our team
+              will ensure a smooth and hassle-free darshan experience.
             </p>
           </div>
 
@@ -188,10 +213,13 @@ export default function EasyDarshanPage() {
                 <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <FaCheckCircle className="text-green-600 text-4xl" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-2 font-cinzel">Thank You!</h3>
+                <h3 className="text-2xl font-bold text-gray-800 mb-2 font-cinzel">
+                  Thank You!
+                </h3>
                 <p className="text-gray-600 mb-6 font-alice">
-                  Your darshan booking has been confirmed. You will receive a confirmation email and SMS shortly.
-                  Please keep your ID proof handy during your visit.
+                  Your darshan booking has been confirmed. You will receive a
+                  confirmation email and SMS shortly. Please keep your ID proof
+                  handy during your visit.
                 </p>
                 <div className="border-t border-gray-200 pt-4 mt-4">
                   <p className="text-sm text-gray-500 mb-4">
@@ -207,13 +235,16 @@ export default function EasyDarshanPage() {
               </div>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-xl p-6 md:p-8 border-t-4 border-[#923C1E]">
+            <form
+              onSubmit={handleSubmit}
+              className="bg-white rounded-lg shadow-xl p-6 md:p-8 border-t-4 border-[#923C1E]"
+            >
               {submitError && (
                 <div className="mb-6 p-4 bg-red-50 border-l-4 border-red-500 text-red-700">
                   <p>{submitError}</p>
                 </div>
               )}
-              
+
               {/* Personal Information Section */}
               <div className="mb-8">
                 <h3 className="text-xl font-semibold mb-4 text-[#923C1E] flex items-center font-cinzel">
@@ -224,7 +255,10 @@ export default function EasyDarshanPage() {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="relative">
-                    <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="fullName"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Full Name*
                     </label>
                     <div className="relative">
@@ -243,9 +277,12 @@ export default function EasyDarshanPage() {
                       />
                     </div>
                   </div>
-                  
+
                   <div className="relative">
-                    <label htmlFor="contactNumber" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="contactNumber"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Contact Number*
                     </label>
                     <div className="relative">
@@ -264,9 +301,12 @@ export default function EasyDarshanPage() {
                       />
                     </div>
                   </div>
-                  
+
                   <div className="relative">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Email Address*
                     </label>
                     <div className="relative">
@@ -285,9 +325,12 @@ export default function EasyDarshanPage() {
                       />
                     </div>
                   </div>
-                  
+
                   <div className="relative md:col-span-2">
-                    <label htmlFor="residentialAddress" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="residentialAddress"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Residential Address*
                     </label>
                     <div className="relative">
@@ -308,7 +351,7 @@ export default function EasyDarshanPage() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Darshan Details Section */}
               <div className="mb-8">
                 <h3 className="text-xl font-semibold mb-4 text-[#923C1E] flex items-center font-cinzel">
@@ -319,7 +362,10 @@ export default function EasyDarshanPage() {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="relative">
-                    <label htmlFor="temple" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="temple"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Temple/Place of Darshan*
                     </label>
                     <div className="relative">
@@ -335,21 +381,38 @@ export default function EasyDarshanPage() {
                         required
                       >
                         <option value="">Select Temple</option>
-                        <option value="Varanasi Kashi Vishwanath">Varanasi Kashi Vishwanath</option>
-                        <option value="Shri Ram Janmabhoomi Temple">Shri Ram Janmabhoomi Temple</option>
-                        <option value="Vaishno Devi Temple">Vaishno Devi Temple</option>
-                     
+                        <option value="Varanasi Kashi Vishwanath">
+                          Varanasi Kashi Vishwanath
+                        </option>
+                        <option value="Shri Ram Janmabhoomi Temple">
+                          Shri Ram Janmabhoomi Temple
+                        </option>
+                        <option value="Vaishno Devi Temple">
+                          Vaishno Devi Temple
+                        </option>
                       </select>
                       <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                        <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                        <svg
+                          className="h-5 w-5 text-gray-400"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clipRule="evenodd"
+                          />
                         </svg>
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="relative">
-                    <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="date"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Preferred Date & Time Slot*
                     </label>
                     <div className="relative">
@@ -367,9 +430,12 @@ export default function EasyDarshanPage() {
                       />
                     </div>
                   </div>
-                  
+
                   <div className="relative">
-                    <label htmlFor="numberOfPersons" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="numberOfPersons"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Number of Persons*
                     </label>
                     <div className="relative">
@@ -391,7 +457,7 @@ export default function EasyDarshanPage() {
                   </div>
                 </div>
               </div>
-              
+
               {/* ID Proof Section */}
               <div className="mb-8">
                 <h3 className="text-xl font-semibold mb-4 text-[#923C1E] flex items-center font-cinzel">
@@ -402,7 +468,10 @@ export default function EasyDarshanPage() {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="relative">
-                    <label htmlFor="idProofType" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="idProofType"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       ID Proof Type*
                     </label>
                     <div className="relative">
@@ -425,15 +494,27 @@ export default function EasyDarshanPage() {
                         <option value="PAN Card">PAN Card</option>
                       </select>
                       <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                        <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                        <svg
+                          className="h-5 w-5 text-gray-400"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clipRule="evenodd"
+                          />
                         </svg>
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="relative">
-                    <label htmlFor="idProofNumber" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="idProofNumber"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       ID Proof Number*
                     </label>
                     <div className="relative">
@@ -452,9 +533,12 @@ export default function EasyDarshanPage() {
                       />
                     </div>
                   </div>
-                  
+
                   <div className="relative md:col-span-2">
-                    <label htmlFor="idProofFile" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="idProofFile"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       Upload ID Proof (Optional)
                     </label>
                     <div className="relative border border-dashed border-gray-300 rounded-lg p-6 text-center hover:bg-gray-50 transition cursor-pointer">
@@ -484,7 +568,7 @@ export default function EasyDarshanPage() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Payment Mode Section */}
               <div className="mb-8">
                 <h3 className="text-xl font-semibold mb-4 text-[#923C1E] flex items-center font-cinzel">
@@ -494,7 +578,10 @@ export default function EasyDarshanPage() {
                   Payment Mode
                 </h3>
                 <div className="relative">
-                  <label htmlFor="paymentMode" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label
+                    htmlFor="paymentMode"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
                     Select Payment Mode*
                   </label>
                   <div className="relative">
@@ -517,14 +604,23 @@ export default function EasyDarshanPage() {
                       <option value="Cash on Arrival">Cash on Arrival</option>
                     </select>
                     <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                      <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                      <svg
+                        className="h-5 w-5 text-gray-400"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clipRule="evenodd"
+                        />
                       </svg>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
               {/* Booking Confirmation */}
               <div className="mb-8">
                 <div className="flex items-start">
@@ -540,32 +636,59 @@ export default function EasyDarshanPage() {
                     />
                   </div>
                   <div className="ml-3 text-sm">
-                    <label htmlFor="confirmBooking" className="font-medium text-gray-700">
-                      I confirm my booking and agree to the terms and conditions*
+                    <label
+                      htmlFor="confirmBooking"
+                      className="font-medium text-gray-700"
+                    >
+                      I confirm my booking and agree to the terms and
+                      conditions*
                     </label>
                     <p className="text-gray-500 mt-1">
-                      By confirming, you agree to provide accurate information and follow temple guidelines during your visit.
+                      By confirming, you agree to provide accurate information
+                      and follow temple guidelines during your visit.
                     </p>
                   </div>
                 </div>
               </div>
-              
+
               {/* Submit Button */}
               <div className="text-center">
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`px-8 py-3 rounded-full text-white font-medium text-lg transition duration-300 shadow-md hover:shadow-lg ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#923C1E] hover:bg-[#7a3319]'}`}
+                  className={`px-8 py-3 rounded-full text-white font-medium text-lg transition duration-300 shadow-md hover:shadow-lg ${
+                    isSubmitting
+                      ? "bg-gray-400 cursor-not-allowed"
+                      : "bg-[#923C1E] hover:bg-[#7a3319]"
+                  }`}
                 >
                   {isSubmitting ? (
                     <span className="flex items-center justify-center">
-                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      <svg
+                        className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        ></path>
                       </svg>
                       Processing...
                     </span>
-                  ) : 'Book Darshan Now'}
+                  ) : (
+                    "Book Darshan Now"
+                  )}
                 </button>
                 <div className="mt-4 text-sm text-gray-500">
                   <span className="text-red-500">*</span> Required fields
@@ -578,7 +701,7 @@ export default function EasyDarshanPage() {
       {/* Image Gallery Section */}
       <section className="py-16 px-4 from-secondary">
         <div className="max-w-7xl mx-auto">
-          <ImageGallery 
+          <ImageGallery
             serviceName="darshana"
             heading={darshana.imageGallery.heading}
             quote={darshana.imageGallery.quote}
@@ -587,8 +710,7 @@ export default function EasyDarshanPage() {
           />
         </div>
       </section>
-<ContanctUsForm />
-     
+      <ContactUsForm />
     </div>
   );
 }

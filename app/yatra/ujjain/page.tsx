@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import ContanctUsForm from "../../components/contanctUsForm";
+import ContactUsForm from "../../components/contactUsForm";
 
 const UjjainPage = () => {
   return (
@@ -375,7 +375,7 @@ const UjjainPage = () => {
       </section>
 
       {/* Contact Form */}
-      <ContanctUsForm className="my-20" />
+      <ContactUsForm className="my-20" />
     </div>
   );
 };
