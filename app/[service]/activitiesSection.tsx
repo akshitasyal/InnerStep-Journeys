@@ -75,59 +75,48 @@ function ActivitiesSection({
         {/* Check if we're on the seva page to apply special layout */}
         {isSevaPage ? (
           <div className="flex flex-col gap-8">
-            {/* First row for Seva activities */}
-            <div className="flex flex-wrap justify-center gap-8">
+            {/* Seva activities */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
               {activities
                 .filter((activity) => !activity.title.includes("Daan"))
                 .map((activity, index) => (
                   <div
                     key={index}
-                    className="bg-white rounded-lg shadow-md p-6 max-w-md flex-1 min-w-[300px]"
+                    className="bg-white rounded-lg shadow-md p-6 flex flex-col"
                   >
-                    <h3 className="font-cinzel text-2xl font-bold text-primary mb-3">
-                      {activity.title}
-                    </h3>
-                    {activity.description && (
-                      <p className="font-alice text-gray-800 mb-4">
-                        {activity.description}
-                      </p>
-                    )}
-                    {activity.includes && activity.includes.length > 0 && (
-                      <div className="mt-4">
+                    <div>
+                      <h3 className="font-cinzel text-2xl font-bold text-primary mb-3">
+                        {activity.title}
+                      </h3>
+
+                      {activity.description && (
+                        <p className="font-alice text-gray-800 mb-4">
+                          {activity.description}
+                        </p>
+                      )}
+
+                      {activity.includes && activity.includes.length > 0 && (
                         <ul className="font-alice list-disc pl-5 space-y-2">
                           {activity.includes.map((item, idx) => (
                             <li key={idx}>{item}</li>
                           ))}
                         </ul>
-                      </div>
-                    )}
-                  </div>
-                ))}
-            </div>
+                      )}
+                    </div>
 
-            {/* Second row for Dana part */}
-            <div className="flex justify-center mt-8">
-              {activities
-                .filter((activity) => activity.title.includes("Daan"))
-                .map((activity, index) => (
-                  <div
-                    key={index}
-                    className="bg-white rounded-lg shadow-md p-6 max-w-lg w-full"
-                  >
-                    <h3 className="font-cinzel text-2xl font-bold text-primary mb-3">
-                      {activity.title}
-                    </h3>
-                    {activity.description && (
-                      <p className="font-alice text-gray-800 mb-4">
-                        {activity.description}
-                      </p>
-                    )}
-                    <button
-                      onClick={() => (window.location.href = "/dana")}
-                      className="mt-6 bg-primary text-white font-cinzel py-2 px-4 rounded-md hover:bg-primary/90 transition-colors w-full cursor-pointer block text-center"
-                    >
-                      View Details
-                    </button>
+                    {/* Button aligned at bottom */}
+                    <div className="mt-auto pt-6">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          // In future: replace alert with modal trigger
+                          alert("Thanks for stepping forward to volunteer!");
+                        }}
+                        className="w-full bg-green-50 text-green-700 font-cinzel py-2 px-4 rounded-lg border border-green-200 hover:bg-green-100 hover:border-green-300 transition-colors cursor-pointer"
+                      >
+                        🤝 Join as a Volunteer
+                      </button>
+                    </div>
                   </div>
                 ))}
             </div>
