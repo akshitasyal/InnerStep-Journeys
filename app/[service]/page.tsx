@@ -1,9 +1,7 @@
 import { notFound } from "next/navigation";
 import ServiceBanner from "./serviceBanner";
-import { darshana } from "../lib/data/darshana";
 import { ServiceData } from "../lib/data/type";
 import { experience } from "../lib/data/experience";
-import { yatra } from "../lib/data/yatra";
 import { seva } from "../lib/data/seva";
 import ActivitiesSection from "./activitiesSection";
 import Image from "next/image";
