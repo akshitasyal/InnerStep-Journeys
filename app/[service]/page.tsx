@@ -1,9 +1,7 @@
 import { notFound } from "next/navigation";
 import ServiceBanner from "./serviceBanner";
-import { darshana } from "../lib/data/darshana";
 import { ServiceData } from "../lib/data/type";
 import { experience } from "../lib/data/experience";
-import { yatra } from "../lib/data/yatra";
 import { seva } from "../lib/data/seva";
 import ActivitiesSection from "./activitiesSection";
 import Image from "next/image";
@@ -11,19 +9,12 @@ import ImageGallery from "./imageGallery";
 import ContanctUsForm from "../components/contactUsForm";
 import DonationSection from "../components/DonationSection";
 
-type ValidSections = "experience" | "darshana" | "yatra" | "seva";
+type ValidSections = "experience" | "seva";
 
-const allowedSections: ValidSections[] = [
-  "experience",
-  "darshana",
-  "yatra",
-  "seva",
-];
+const allowedSections: ValidSections[] = ["experience", "seva"];
 
 const contentMap: Record<ValidSections, ServiceData> = {
-  darshana,
   experience,
-  yatra,
   seva,
 };
 
