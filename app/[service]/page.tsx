@@ -11,19 +11,12 @@ import ImageGallery from "./imageGallery";
 import ContanctUsForm from "../components/contactUsForm";
 import DonationSection from "../components/DonationSection";
 
-type ValidSections = "experience" | "darshana" | "yatra" | "seva";
+type ValidSections = "experience" | "seva";
 
-const allowedSections: ValidSections[] = [
-  "experience",
-  "darshana",
-  "yatra",
-  "seva",
-];
+const allowedSections: ValidSections[] = ["experience", "seva"];
 
 const contentMap: Record<ValidSections, ServiceData> = {
-  darshana,
   experience,
-  yatra,
   seva,
 };
 
