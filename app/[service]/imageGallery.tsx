@@ -21,7 +21,7 @@ function ImageGallery({
         width={700}
         height={700}
         alt="background vector"
-        className="absolute right-0 top-0 translate-y-[-60%] rotate-180 "
+        className="absolute right-0 top-0 translate-y-[-60%] rotate-180 pointer-events-none"
       />
 
       <Image
@@ -29,7 +29,7 @@ function ImageGallery({
         width={500}
         height={500}
         alt="background vector"
-        className="absolute right-0 bottom-0 translate-y-[38%] "
+        className="absolute right-0 bottom-0 translate-y-[38%] pointer-events-none"
       />
 
       <Image
@@ -37,7 +37,7 @@ function ImageGallery({
         width={500}
         height={500}
         alt="background vector"
-        className="absolute left-0 bottom-0 translate-y-[38%] "
+        className="absolute left-0 bottom-0 translate-y-[38%] pointer-events-none"
       />
 
       <h2 className="font-cinzel text-center text-4xl font-bold text-primary ">
