@@ -93,7 +93,7 @@ export default function EasyDarshanPage() {
     try {
       setIsSubmitting(true);
 
-      const { data, error } = await supabase.from("darshan_bookings").insert([
+      const { error } = await supabase.from("darshan_bookings").insert([
         {
           full_name: formData.fullName,
           contact_number: formData.contactNumber,
@@ -187,7 +187,7 @@ export default function EasyDarshanPage() {
               <div className="bg-gradient-to-b from-[#FFFBEA] to-[#FDF4B3] rounded-2xl shadow-2xl p-8 md:p-10 border border-[#E6C77C]/50 max-w-lg w-full mx-4 relative animate-fadeIn">
                 {/* Close Button (X) */}
                 <button
-                  onClick={() => setShowConfirmation(false)}
+                  onClick={closeConfirmation}
                   className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 transition"
                 >
                   ✕
@@ -222,9 +222,7 @@ export default function EasyDarshanPage() {
 
                   {/* Button */}
                   <button
-                    onClick={() => {
-                      setShowConfirmation(false);
-                    }}
+                    onClick={closeConfirmation}
                     className="px-10 py-3 rounded-full bg-gradient-to-r from-[#923C1E] to-[#B15A2A] text-white font-cinzel font-semibold hover:shadow-lg hover:scale-105 transition"
                   >
                     Close
