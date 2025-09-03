@@ -115,11 +115,11 @@ const BookingModal: React.FC<BookingModalProps> = ({
     <>
       {/* Main booking modal */}
       <div
-        className="fixed inset-0 backdrop-blur-md bg-black/30 flex items-center justify-center z-[100]"
+        className="fixed inset-0 backdrop-blur-md bg-black/30 flex items-center justify-center z-50"
         onClick={onClose}
       >
         <div
-          className="bg-white rounded-lg p-8 max-w-md w-full max-h-[90vh] overflow-y-auto"
+          className="bg-secondary rounded-lg p-8 max-w-md w-full max-h-[90vh] overflow-y-auto"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex justify-between items-center mb-6">
@@ -151,7 +151,7 @@ const BookingModal: React.FC<BookingModalProps> = ({
                 className={`w-full px-4 py-2 border rounded-md focus:outline-none ${
                   errors.name
                     ? "border-red-500"
-                    : "border-gray-300 focus:ring-2 focus:ring-primary"
+                    : "border-gray-700 focus:ring-2 focus:ring-primary"
                 }`}
               />
               {errors.name && (
@@ -175,7 +175,7 @@ const BookingModal: React.FC<BookingModalProps> = ({
                 className={`w-full px-4 py-2 border rounded-md focus:outline-none ${
                   errors.email
                     ? "border-red-500"
-                    : "border-gray-300 focus:ring-2 focus:ring-primary"
+                    : "border-gray-700 focus:ring-2 focus:ring-primary"
                 }`}
               />
               {errors.email && (
@@ -199,7 +199,7 @@ const BookingModal: React.FC<BookingModalProps> = ({
                 className={`w-full px-4 py-2 border rounded-md focus:outline-none ${
                   errors.mobile
                     ? "border-red-500"
-                    : "border-gray-300 focus:ring-2 focus:ring-primary"
+                    : "border-gray-700 focus:ring-2 focus:ring-primary"
                 }`}
               />
               {errors.mobile && (
@@ -223,7 +223,7 @@ const BookingModal: React.FC<BookingModalProps> = ({
                 className={`w-full px-4 py-2 border rounded-md focus:outline-none ${
                   errors.address
                     ? "border-red-500"
-                    : "border-gray-300 focus:ring-2 focus:ring-primary"
+                    : "border-gray-700 focus:ring-2 focus:ring-primary"
                 }`}
               />
               {errors.address && (
@@ -244,7 +244,7 @@ const BookingModal: React.FC<BookingModalProps> = ({
                 name="service"
                 value={formData.service}
                 readOnly
-                className="w-full px-4 py-2 border border-gray-300 rounded-md bg-gray-50"
+                className="w-full px-4 py-2 border border-gray-700 rounded-md "
               />
               {errors.service && (
                 <p className="text-red-500 text-sm">{errors.service}</p>
