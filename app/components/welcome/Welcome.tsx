@@ -9,7 +9,7 @@ const Welcome: React.FC = () => {
         width={800}
         height={800}
         alt="background vector"
-        className="absolute right-0 bottom-0 rotate-180 translate-y-[10%] "
+        className="absolute right-0 bottom-0 rotate-180 translate-y-[10%] pointer-events-none"
       />
       <div className="container mx-auto px-4">
         {/* Decorative element at top */}

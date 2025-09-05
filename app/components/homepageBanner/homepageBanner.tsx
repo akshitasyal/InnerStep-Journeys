@@ -7,7 +7,7 @@ const MeditationBanner: React.FC = () => {
     <section className="relative w-full ">
       <FloatingWindow />
 
-      <div className="absolute top-0 left-0 translate-y-[-10%] ">
+      <div className="absolute top-0 left-0 translate-y-[-10%] pointer-events-none">
         <Image
           width={842}
           height={1053}
