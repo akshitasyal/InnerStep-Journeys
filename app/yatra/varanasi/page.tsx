@@ -9,13 +9,15 @@ const VaranasiPage = () => {
       <section className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/varanasi-hero.jpg"
+            src="/images/yatra/kashi/Kashi icon.jpg"
             alt="Varanasi Ghats"
             fill
             className="object-cover brightness-75"
             priority
           />
         </div>
+        <div className="absolute inset-0 bg-white/30"></div>
+        <div className="absolute h-[50%] bottom-0 left-0 right-0 bg-gradient-to-t from-secondary to-transparent"></div>
         <div className="relative z-10 text-center text-primary px-4">
           <h1 className="font-cinzel text-4xl md:text-6xl font-bold mb-4">
             Varanasi
@@ -214,7 +216,7 @@ const VaranasiPage = () => {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-[1.02]">
               <div className="relative h-64">
                 <Image
-                  src="/images/kashi-vishwanath.jpg"
+                  src="/images/yatra/kashi/Kashi-Vishwanath-Temple-1.jpg"
                   alt="Kashi Vishwanath Temple"
                   fill
                   className="object-cover"
@@ -236,7 +238,7 @@ const VaranasiPage = () => {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-[1.02]">
               <div className="relative h-64">
                 <Image
-                  src="/images/dashashwamedh-ghat.jpg"
+                  src="/images/yatra/kashi/Dashashwamedh Ghat.jpg"
                   alt="Dashashwamedh Ghat"
                   fill
                   className="object-cover"
@@ -257,7 +259,7 @@ const VaranasiPage = () => {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-[1.02]">
               <div className="relative h-64">
                 <Image
-                  src="/images/sarnath.jpg"
+                  src="/images/yatra/kashi/Sarnath.jpg"
                   alt="Sarnath"
                   fill
                   className="object-cover"
