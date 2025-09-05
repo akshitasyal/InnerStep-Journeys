@@ -148,7 +148,7 @@ const Testimonials: React.FC = () => {
         alt="background vector"
         width={800}
         height={800}
-        className="absolute bottom-0 left-0 rotate-180 translate-y-[-15%] translate-x-[-25%]  z-[-1]"
+        className="absolute bottom-0 left-0 rotate-180 translate-y-[-15%] translate-x-[-25%]  z-[-1] pointer-events-none"
       />
     </section>
   );

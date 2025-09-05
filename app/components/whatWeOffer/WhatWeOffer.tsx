@@ -49,7 +49,7 @@ const WhatWeOffer: React.FC = () => {
         alt="background vector"
         width={1000}
         height={1000}
-        className="absolute top-0 left-0 translate-y-[-50%]"
+        className="absolute top-0 left-0 translate-y-[-50%] pointer-events-none"
       />
 
       <Image
@@ -57,7 +57,7 @@ const WhatWeOffer: React.FC = () => {
         alt="background vector"
         width={600}
         height={600}
-        className="absolute top-0 right-0 translate-y-[-10%] "
+        className="absolute top-0 right-0 translate-y-[-10%] pointer-events-none "
       />
 
       <div className="container mx-auto px-4">

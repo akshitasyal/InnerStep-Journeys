@@ -23,7 +23,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         height="134"
         viewBox="0 0 436 134"
         fill="none"
-        className="absolute top-0 left-0 w-[85%]"
+        className="absolute top-0 left-0 w-[85%] pointer-events-none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -57,7 +57,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         height="135"
         viewBox="0 0 436 135"
         fill="none"
-        className="absolute right-0 bottom-0 w-[85%]"
+        className="absolute right-0 bottom-0 w-[85%] pointer-events-none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path

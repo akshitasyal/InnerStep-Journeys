@@ -38,7 +38,7 @@ function Footer() {
         src="/svg/bg-vector.svg"
         width={100}
         height={100}
-        className="w-fit h-fit absolute top-[-60%] left-0 -z-1"
+        className="w-fit h-fit absolute top-[-60%] left-0 -z-1 pointer-events-none"
         alt="bg-vector"
       />
 
