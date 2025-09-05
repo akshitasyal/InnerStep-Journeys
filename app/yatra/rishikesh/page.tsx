@@ -9,13 +9,15 @@ const RishikeshPage = () => {
       <section className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/rishikesh-hero.jpg"
+            src="/images/yatra/rishikesh/Rishikesh icon.jpg"
             alt="Rishikesh"
             fill
             className="object-cover brightness-75"
             priority
           />
         </div>
+        <div className="absolute inset-0 bg-white/30"></div>
+        <div className="absolute h-[50%] bottom-0 left-0 right-0 bg-gradient-to-t from-secondary to-transparent"></div>
         <div className="relative z-10 text-center text-primary px-4">
           <h1 className="font-cinzel text-4xl md:text-6xl font-bold mb-4">
             Rishikesh
@@ -217,7 +219,7 @@ const RishikeshPage = () => {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-[1.02]">
               <div className="relative h-64">
                 <Image
-                  src="/images/triveni-ghat.jpg"
+                  src="/images/yatra/rishikesh/Triveni Ghat.jpg"
                   alt="Triveni Ghat"
                   fill
                   className="object-cover"
@@ -239,7 +241,7 @@ const RishikeshPage = () => {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-[1.02]">
               <div className="relative h-64">
                 <Image
-                  src="/images/neelkanth-mahadev.jpg"
+                  src="/images/yatra/rishikesh/neelkanth.jpg"
                   alt="Neelkanth Mahadev Temple"
                   fill
                   className="object-cover"
@@ -261,7 +263,7 @@ const RishikeshPage = () => {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-[1.02]">
               <div className="relative h-64">
                 <Image
-                  src="/images/parmarth-niketan.jpg"
+                  src="/images/yatra/rishikesh/Parmarth Niketan.jpg"
                   alt="Parmarth Niketan"
                   fill
                   className="object-cover"

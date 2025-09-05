@@ -52,35 +52,37 @@ const DonationSection: React.FC<DonationSectionProps> = ({
 
         <div className="flex flex-wrap justify-center gap-8">
           {/* Anna Daan Card */}
-          <div className="bg-[#FDF4B3] rounded-lg shadow-md p-6 max-w-sm flex-1 min-w-[300px]">
-            <h3 className="font-cinzel text-2xl font-bold text-primary mb-3">
-              Anna Daan
-            </h3>
-            <div className="h-48 relative mb-4 overflow-hidden rounded-lg">
-              <Image
-                src="/images/anna-daan.jpg"
-                alt="Anna Daan"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <p className="font-alice text-gray-800 mb-4">
-              Food donation is considered one of the noblest forms of charity.
-              By providing nourishment to those in need, we honor the divine
-              connection between all beings. Our Anna Daan programs distribute
-              fresh, nutritious meals to underprivileged communities, serving
-              both body and soul.
-            </p>
-            <div className="mt-4">
-              <h4 className="font-cinzel text-lg font-bold text-primary mb-2">
-                INCLUDES:
-              </h4>
-              <ul className="font-alice list-disc pl-5 space-y-2">
-                <li>Regular food distribution drives</li>
-                <li>Community kitchen volunteering</li>
-                <li>Sponsorship of meals at schools and shelters</li>
-                <li>Emergency food relief during disasters</li>
-              </ul>
+          <div className="bg-[#FDF4B3] rounded-lg shadow-md p-6 max-w-sm flex-1 min-w-[300px] flex flex-col">
+            <div className="flex-grow">
+              <h3 className="font-cinzel text-2xl font-bold text-primary mb-3">
+                Anna Daan
+              </h3>
+              <div className="aspect-square relative mb-4 overflow-hidden rounded-lg">
+                <Image
+                  src="/images/seva/anna daan.png"
+                  alt="Anna Daan"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <p className="font-alice text-gray-800 mb-4">
+                Food donation is considered one of the noblest forms of charity.
+                By providing nourishment to those in need, we honor the divine
+                connection between all beings. Our Anna Daan programs distribute
+                fresh, nutritious meals to underprivileged communities, serving
+                both body and soul.
+              </p>
+              <div className="mt-4">
+                <h4 className="font-cinzel text-lg font-bold text-primary mb-2">
+                  INCLUDES:
+                </h4>
+                <ul className="font-alice list-disc pl-5 space-y-2">
+                  <li>Regular food distribution drives</li>
+                  <li>Community kitchen volunteering</li>
+                  <li>Sponsorship of meals at schools and shelters</li>
+                  <li>Emergency food relief during disasters</li>
+                </ul>
+              </div>
             </div>
             <button
               onClick={() => handleOpenModal("Anna Daan")}
@@ -91,35 +93,37 @@ const DonationSection: React.FC<DonationSectionProps> = ({
           </div>
 
           {/* Vidya Daan Card */}
-          <div className="bg-[#FDF4B3] rounded-lg shadow-md p-6 max-w-sm flex-1 min-w-[300px]">
-            <h3 className="font-cinzel text-2xl font-bold text-primary mb-3">
-              Vidya Daan
-            </h3>
-            <div className="h-48 relative mb-4 overflow-hidden rounded-lg">
-              <Image
-                src="/images/vidya-daan.jpg"
-                alt="Vidya Daan"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <p className="font-alice text-gray-800 mb-4">
-              The gift of knowledge is eternal. Through our Vidya Daan
-              initiatives, we support educational opportunities for
-              underprivileged children and adults. By sharing wisdom and
-              learning resources, we empower individuals to transform their
-              lives and communities.
-            </p>
-            <div className="mt-4">
-              <h4 className="font-cinzel text-lg font-bold text-primary mb-2">
-                INCLUDES:
-              </h4>
-              <ul className="font-alice list-disc pl-5 space-y-2">
-                <li>Educational sponsorships for children</li>
-                <li>Adult literacy programs</li>
-                <li>Distribution of books and learning materials</li>
-                <li>Mentorship and skill development workshops</li>
-              </ul>
+          <div className="bg-[#FDF4B3] rounded-lg shadow-md p-6 max-w-sm flex-1 min-w-[300px] flex flex-col">
+            <div className="flex-grow">
+              <h3 className="font-cinzel text-2xl font-bold text-primary mb-3">
+                Vidya Daan
+              </h3>
+              <div className="aspect-square relative mb-4 overflow-hidden rounded-lg">
+                <Image
+                  src="/images/seva/vidya daan.png"
+                  alt="Vidya Daan"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <p className="font-alice text-gray-800 mb-4">
+                The gift of knowledge is eternal. Through our Vidya Daan
+                initiatives, we support educational opportunities for
+                underprivileged children and adults. By sharing wisdom and
+                learning resources, we empower individuals to transform their
+                lives and communities.
+              </p>
+              <div className="mt-4">
+                <h4 className="font-cinzel text-lg font-bold text-primary mb-2">
+                  INCLUDES:
+                </h4>
+                <ul className="font-alice list-disc pl-5 space-y-2">
+                  <li>Educational sponsorships for children</li>
+                  <li>Adult literacy programs</li>
+                  <li>Distribution of books and learning materials</li>
+                  <li>Mentorship and skill development workshops</li>
+                </ul>
+              </div>
             </div>
             <button
               onClick={() => handleOpenModal("Vidya Daan")}
@@ -130,34 +134,36 @@ const DonationSection: React.FC<DonationSectionProps> = ({
           </div>
 
           {/* Cause-Based Daan Card */}
-          <div className="bg-[#FDF4B3] rounded-lg shadow-md p-6 max-w-sm flex-1 min-w-[300px]">
-            <h3 className="font-cinzel text-2xl font-bold text-primary mb-3">
-              Cause-Based Daan
-            </h3>
-            <div className="h-48 relative mb-4 overflow-hidden rounded-lg">
-              <Image
-                src="/images/cause-daan.jpg"
-                alt="Cause-Based Daan"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <p className="font-alice text-gray-800 mb-4">
-              Our targeted giving programs address specific community needs
-              through strategic charitable initiatives. From environmental
-              conservation to healthcare access, these programs create lasting
-              positive impact in areas that need it most.
-            </p>
-            <div className="mt-4">
-              <h4 className="font-cinzel text-lg font-bold text-primary mb-2">
-                INCLUDES:
-              </h4>
-              <ul className="font-alice list-disc pl-5 space-y-2">
-                <li>Environmental restoration projects</li>
-                <li>Medical camps and healthcare initiatives</li>
-                <li>Animal welfare programs</li>
-                <li>Support for elderly and differently-abled individuals</li>
-              </ul>
+          <div className="bg-[#FDF4B3] rounded-lg shadow-md p-6 max-w-sm flex-1 min-w-[300px] flex flex-col">
+            <div className="flex-grow">
+              <h3 className="font-cinzel text-2xl font-bold text-primary mb-3">
+                Cause-Based Daan
+              </h3>
+              <div className="aspect-square relative mb-4 overflow-hidden rounded-lg">
+                <Image
+                  src="/images/seva/cause based daan.png"
+                  alt="Cause-Based Daan"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <p className="font-alice text-gray-800 mb-4">
+                Our targeted giving programs address specific community needs
+                through strategic charitable initiatives. From environmental
+                conservation to healthcare access, these programs create lasting
+                positive impact in areas that need it most.
+              </p>
+              <div className="mt-4">
+                <h4 className="font-cinzel text-lg font-bold text-primary mb-2">
+                  INCLUDES:
+                </h4>
+                <ul className="font-alice list-disc pl-5 space-y-2">
+                  <li>Environmental restoration projects</li>
+                  <li>Medical camps and healthcare initiatives</li>
+                  <li>Animal welfare programs</li>
+                  <li>Support for elderly and differently-abled individuals</li>
+                </ul>
+              </div>
             </div>
             <button
               onClick={() => handleOpenModal("Cause-Based Daan")}

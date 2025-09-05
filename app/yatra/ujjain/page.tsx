@@ -9,13 +9,15 @@ const UjjainPage = () => {
       <section className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/ujjain-hero.jpg"
+            src="/images/yatra/Ujjain/Ujjain icon.jpg"
             alt="Ujjain Mahakaleshwar Temple"
             fill
             className="object-cover brightness-75"
             priority
           />
         </div>
+        <div className="absolute inset-0 bg-white/30"></div>
+        <div className="absolute h-[50%] bottom-0 left-0 right-0 bg-gradient-to-t from-secondary to-transparent"></div>
         <div className="relative z-10 text-center text-primary px-4">
           <h1 className="font-cinzel text-4xl md:text-6xl font-bold mb-4">
             Ujjain
@@ -214,7 +216,7 @@ const UjjainPage = () => {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-[1.02]">
               <div className="relative h-64">
                 <Image
-                  src="/images/mahakaleshwar-temple.jpg"
+                  src="/images/yatra/Ujjain/Mahakal_Temple_Ujjain.JPG"
                   alt="Mahakaleshwar Temple"
                   fill
                   className="object-cover"
@@ -236,7 +238,7 @@ const UjjainPage = () => {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-[1.02]">
               <div className="relative h-64">
                 <Image
-                  src="/images/kal-bhairav-temple.jpg"
+                  src="/images/yatra/Ujjain/kal bhairav temple.jpeg"
                   alt="Kal Bhairav Temple"
                   fill
                   className="object-cover"
@@ -258,7 +260,7 @@ const UjjainPage = () => {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-[1.02]">
               <div className="relative h-64">
                 <Image
-                  src="/images/sandipani-ashram.jpg"
+                  src="/images/yatra/Ujjain/sandipani-ashram.jpg"
                   alt="Sandipani Ashram"
                   fill
                   className="object-cover"
