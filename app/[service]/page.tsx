@@ -76,5 +76,5 @@ export default async function SectionPage({
 }
 
 export async function generateStaticParams() {
-  return allowedSections.map((section) => ({ section }));
+  return allowedSections.map((section) => ({ service: section }));
 }
