@@ -1,28 +1,27 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
 
 type MenuItemsProps = {
   name: string;
   link?: string;
+  selectedItem: string | null;
+  onClickHandler: (item: string) => void;
 };
 
-export default function MenuItems({ name, link }: MenuItemsProps) {
-  const [pathname, setPathname] = useState<string>("/");
-  const href = link || `/${name.toLowerCase()}`;
-
-  useEffect(() => {
-    setPathname(window.location.pathname.split("/")[1]);
-    console.log(window.location.pathname, name);
-  }, []);
-
-  const isSelected = pathname.toLowerCase() === name.toLowerCase();
-
+export default function MenuItems({
+  name,
+  link,
+  selectedItem,
+  onClickHandler,
+}: MenuItemsProps) {
   return (
     <Link
-      href={href}
+      href={link || `/${name.toLowerCase()}`}
+      onClick={() => onClickHandler(name.toLowerCase())}
       className={`uppercase cursor-pointer py-0.1 px-3 rounded-2xl hover:text-primary ${
-        isSelected ? "border-1 border-primary" : ""
+        name.toLocaleLowerCase() == selectedItem
+          ? "border-1 border-primary"
+          : ""
       }`}
     >
       <span className="text-xl">{name.charAt(0)}</span>
