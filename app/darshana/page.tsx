@@ -17,6 +17,7 @@ import ImageGallery from "../[service]/imageGallery";
 import { darshana } from "../lib/data/darshana";
 import ContactUsForm from "../components/contactUsForm";
 import { supabase } from "../lib/supabase";
+import { getLocalDateTime, localToISO } from "../lib/dateAndTime";
 
 interface FormData {
   fullName: string;
@@ -136,7 +137,7 @@ export default function EasyDarshanPage() {
             email: formData.email,
             residential_address: formData.residentialAddress,
             temple: formData.temple,
-            date: formData.date,
+            date: localToISO(formData.date),
             number_of_persons: formData.numberOfPersons,
             id_proof_type: formData.idProofType,
             id_proof_number: formData.idProofNumber,
@@ -284,52 +285,52 @@ export default function EasyDarshanPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Full Name */}
                     <div className="relative">
-                      <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
+                      <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-primary" />
                       <input
                         type="text"
                         name="fullName"
                         value={formData.fullName}
                         onChange={handleChange}
                         placeholder="Full Name *"
-                        className="pl-10 w-full border border-gray-500 rounded-lg py-3 px-4  focus:ring-2 focus:ring-primary outline-none"
+                        className="pl-10 w-full border border-primary rounded-lg py-3 px-4  focus:ring-2 focus:ring-primary outline-none"
                         required
                       />
                     </div>
                     {/* Contact Number */}
                     <div className="relative">
-                      <FaPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
+                      <FaPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-primary" />
                       <input
                         type="tel"
                         name="contactNumber"
                         value={formData.contactNumber}
                         onChange={handleChange}
                         placeholder="+91 9876543210 *"
-                        className="pl-10 w-full border border-gray-500 rounded-lg py-3 px-4  focus:ring-2 focus:ring-primary outline-none"
+                        className="pl-10 w-full border border-primary rounded-lg py-3 px-4  focus:ring-2 focus:ring-primary outline-none"
                         required
                       />
                     </div>
                     {/* Email */}
                     <div className="relative">
-                      <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
+                      <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-primary" />
                       <input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="Email Address *"
-                        className="pl-10 w-full border border-gray-500 rounded-lg py-3 px-4  focus:ring-2 focus:ring-primary outline-none"
+                        className="pl-10 w-full border border-primary rounded-lg py-3 px-4  focus:ring-2 focus:ring-primary outline-none"
                         required
                       />
                     </div>
                     {/* Address */}
                     <div className="relative md:col-span-2">
-                      <FaHome className="absolute left-3 top-4 text-gray-500" />
+                      <FaHome className="absolute left-3 top-4 text-primary" />
                       <textarea
                         name="residentialAddress"
                         value={formData.residentialAddress}
                         onChange={handleChange}
                         placeholder="Residential Address *"
-                        className="pl-10 w-full border border-gray-500 rounded-lg py-3 px-4  focus:ring-2 focus:ring-primary outline-none"
+                        className="pl-10 w-full border border-primary rounded-lg py-3 px-4  focus:ring-2 focus:ring-primary outline-none"
                         required
                       />
                     </div>
@@ -344,14 +345,14 @@ export default function EasyDarshanPage() {
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="relative">
-                      <FaBuilding className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
+                      <FaBuilding className="absolute left-3 top-1/2 -translate-y-1/2 text-primary" />
 
                       {/* Custom select */}
                       <select
                         name="temple"
                         value={formData.temple}
                         onChange={handleChange}
-                        className="appearance-none pl-10 pr-10 w-full border border-gray-500 rounded-lg py-3 px-4   focus:ring-2 focus:ring-primary outline-none"
+                        className="appearance-none pl-10 pr-10 w-full border border-primary rounded-lg py-3 px-4   focus:ring-2 focus:ring-primary outline-none"
                         required
                       >
                         <option value="">Select Temple *</option>
@@ -368,7 +369,7 @@ export default function EasyDarshanPage() {
 
                       {/* Custom arrow */}
                       <svg
-                        className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none"
+                        className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-primary pointer-events-none"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -384,26 +385,26 @@ export default function EasyDarshanPage() {
                     </div>
 
                     <div className="relative">
-                      <FaCalendarAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
+                      <FaCalendarAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-primary" />
                       <input
                         type="datetime-local"
                         name="date"
                         value={formData.date}
                         onChange={handleChange}
-                        min={new Date().toISOString().slice(0, 16)}
-                        className="pl-10 w-full border border-gray-500 rounded-lg py-3 px-4  focus:ring-2 focus:ring-primary outline-none"
+                        min={getLocalDateTime()}
+                        className="pl-10 w-full border border-primary rounded-lg py-3 px-4  focus:ring-2 focus:ring-primary outline-none"
                         required
                       />
                     </div>
                     <div className="relative">
-                      <FaUsers className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
+                      <FaUsers className="absolute left-3 top-1/2 -translate-y-1/2 text-primary" />
                       <input
                         type="number"
                         name="numberOfPersons"
                         value={formData.numberOfPersons}
                         onChange={handleChange}
                         placeholder="Number of Persons *"
-                        className="pl-10 w-full border border-gray-500 rounded-lg py-3 px-4  focus:ring-2 focus:ring-primary outline-none"
+                        className="pl-10 w-full border border-primary rounded-lg py-3 px-4  focus:ring-2 focus:ring-primary outline-none"
                         required
                       />
                     </div>
@@ -418,12 +419,12 @@ export default function EasyDarshanPage() {
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="relative">
-                      <FaIdCard className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
+                      <FaIdCard className="absolute left-3 top-1/2 -translate-y-1/2 text-primary" />
                       <select
                         name="idProofType"
                         value={formData.idProofType}
                         onChange={handleChange}
-                        className="pl-10 w-full border border-gray-500 rounded-lg py-3 px-4  focus:ring-2 focus:ring-primary outline-none"
+                        className="pl-10 w-full border border-primary rounded-lg py-3 px-4  focus:ring-2 focus:ring-primary outline-none"
                         required
                       >
                         <option value="">Select ID Proof *</option>
@@ -435,14 +436,14 @@ export default function EasyDarshanPage() {
                       </select>
                     </div>
                     <div className="relative">
-                      <FaIdCard className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
+                      <FaIdCard className="absolute left-3 top-1/2 -translate-y-1/2 text-primary" />
                       <input
                         type="text"
                         name="idProofNumber"
                         value={formData.idProofNumber}
                         onChange={handleChange}
                         placeholder="ID Proof Number *"
-                        className="pl-10 w-full border border-gray-500 rounded-lg py-3 px-4  focus:ring-2 focus:ring-primary outline-none"
+                        className="pl-10 w-full border border-primary rounded-lg py-3 px-4  focus:ring-2 focus:ring-primary outline-none"
                         required
                       />
                     </div>
