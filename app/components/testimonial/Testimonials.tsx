@@ -12,28 +12,28 @@ interface TestimonialData {
 
 const testimonialData: TestimonialData[] = [
   {
-    imageUrl: "/images/testimonial-1.png", // You'll need to add these images to your public folder
+    imageUrl: "/images/testimonial-1.jpg", // You'll need to add these images to your public folder
     name: "Aarav Mehta",
     location: "Student, Delhi",
     comment:
       "The temples were magical, but the real change happened during the life skills sessions. I now have tools for focus and inner calm.",
   },
   {
-    imageUrl: "/images/testimonial-2.png",
+    imageUrl: "/images/testimonial-2.jpg",
     name: "Priya Sharma",
     location: "Teacher, Mumbai",
     comment:
       "This journey transformed my perspective on teaching. The meditation techniques I learned have helped both me and my students.",
   },
   {
-    imageUrl: "/images/testimonial-3.png",
+    imageUrl: "/images/testimonial-3.jpg",
     name: "Raj Patel",
     location: "Business Owner, Bangalore",
     comment:
       "The cultural immersion was profound. I've incorporated the mindfulness practices into my daily routine and business operations.",
   },
   {
-    imageUrl: "/images/testimonial-4.png",
+    imageUrl: "/images/testimonial-4.jpg",
     name: "Raj Patel",
     location: "Business Owner, Bangalore",
     comment:

@@ -39,7 +39,7 @@ const Welcome: React.FC = () => {
           </div>
           <div className="xl:col-span-4 relative h-[300px] rounded-lg overflow-hidden">
             <Image
-              src="/images/welcomeImage1.png"
+              src="/images/welcomeImage1.jpg"
               alt="Meditation"
               fill
               className="object-cover"
@@ -47,7 +47,7 @@ const Welcome: React.FC = () => {
           </div>
           <div className="xl:col-span-2 relative h-[300px] rounded-lg overflow-hidden">
             <Image
-              src="/images/welcomeImage2.png"
+              src="/images/welcomeImage2.jpg"
               alt="Spiritual guide"
               fill
               className="object-cover"
@@ -63,7 +63,7 @@ const Welcome: React.FC = () => {
           </div>
           <div className="xl:col-span-3 relative h-[300px] rounded-lg overflow-hidden">
             <Image
-              src="/images/welcomeImage4.png"
+              src="/images/welcomeImage4.jpg"
               alt="Spiritual ceremony"
               fill
               className="object-cover"
@@ -71,7 +71,7 @@ const Welcome: React.FC = () => {
           </div>
           <div className="xl:col-span-2 relative h-[300px] rounded-lg overflow-hidden">
             <Image
-              src="/images/welcomeImage5.png"
+              src="/images/welcomeImage5.jpg"
               alt="Holi celebration"
               fill
               className="object-cover"

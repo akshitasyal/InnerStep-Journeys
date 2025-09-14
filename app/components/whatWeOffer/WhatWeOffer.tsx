@@ -10,33 +10,33 @@ const WhatWeOffer: React.FC = () => {
       title: "Vrindavan- The land of krishna's leela",
       description:
         "From arrival to darshan, we guide you every step with care and devotion.",
-      imagePath: "/images/serviceImage1.png",
+      imagePath: "/images/serviceImage1.jpg",
     },
     {
       id: 2,
       title: "Customised Batch-Wise Group Travel",
       description:
         "Each journey tailored to your group's pace, needs, and intentions.",
-      imagePath: "/images/serviceImage2.png",
+      imagePath: "/images/serviceImage2.jpg",
     },
     {
       id: 3,
       title: "Based on Location & Spiritual Calendar",
       description: "Timings that align with sacred energies and festivals.",
-      imagePath: "/images/serviceImage3.png",
+      imagePath: "/images/serviceImage3.jpg",
     },
     {
       id: 4,
       title: "Karma Yoga in Action Without Expectations",
       description: "Do good without asking – just as the Gita teaches.",
-      imagePath: "/images/serviceImage4.png",
+      imagePath: "/images/serviceImage4.jpg",
     },
     {
       id: 5,
       title: "Verified Donations – Meals, Pujas, Support",
       description:
         "Your offerings go where they matter, with complete authenticity.",
-      imagePath: "/images/serviceImage5.png",
+      imagePath: "/images/serviceImage5.jpg",
     },
   ];
 
