@@ -6,8 +6,8 @@ import { seva } from "../lib/data/seva";
 import ActivitiesSection from "./activitiesSection";
 import Image from "next/image";
 import ImageGallery from "./imageGallery";
-import ContanctUsForm from "../components/contactUsForm";
-import DonationSection from "../components/DonationSection";
+import ContactUsForm from "@/app/components/ContactUsForm";
+import DonationSection from "@/app/components/DonationSection";
 
 type ValidSections = "experience" | "seva";
 
@@ -70,7 +70,7 @@ export default async function SectionPage({
         section={content.imageGallery.section}
       />
 
-      <ContanctUsForm className="my-20" />
+      <ContactUsForm className="my-20" />
     </div>
   );
 }

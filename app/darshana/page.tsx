@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa";
 import ImageGallery from "../[service]/imageGallery";
 import { darshana } from "../lib/data/darshana";
-import ContactUsForm from "../components/contactUsForm";
+import ContactUsForm from "@/app/components/ContactUsForm";
 import { supabase } from "../lib/supabase";
 import { getLocalDateTime, localToISO } from "../lib/dateAndTime";
 

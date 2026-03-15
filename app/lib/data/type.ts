@@ -1,4 +1,4 @@
-interface AcitvityType {
+interface ActivityType {
   heading: string;
   subHeading: string;
   activity: {
@@ -13,7 +13,7 @@ interface AcitvityType {
 export interface ServiceData {
   heading: string;
   subHeading: string;
-  activity: AcitvityType;
+  activity: ActivityType;
   imageGallery : {
     heading : string,
     quote : string,

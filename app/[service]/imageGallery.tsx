@@ -52,14 +52,14 @@ function ImageGallery({
               height={760}
               alt="gallery Image 1"
               className="rounded-4xl shadow-md shadow-primary lg:max-h-55"
-              src={`/images/${serviceName}/galleryImage1.png`}
+              src={`/images/${serviceName}/galleryImage1.jpg`}
             />
             <Image
               width={1024}
               height={760}
               alt="gallery Image 2"
               className="rounded-4xl shadow-md shadow-primary lg:max-h-55"
-              src={`/images/${serviceName}/galleryImage2.png`}
+              src={`/images/${serviceName}/galleryImage2.jpg`}
             />
           </div>
           <div className="flex flex-2 flex-col justify-end gap-5">
@@ -68,14 +68,14 @@ function ImageGallery({
               height={760}
               alt="gallery Image 3"
               className="rounded-4xl shadow-md shadow-primary"
-              src={`/images/${serviceName}/galleryImage3.png`}
+              src={`/images/${serviceName}/galleryImage3.jpg`}
             />
             <Image
               width={1024}
               height={760}
               alt="gallery Image 4"
               className="rounded-4xl shadow-md shadow-primary"
-              src={`/images/${serviceName}/galleryImage4.png`}
+              src={`/images/${serviceName}/galleryImage4.jpg`}
             />
           </div>
           <div className="flex flex-1 flex-col justify-end gap-5">
@@ -84,14 +84,14 @@ function ImageGallery({
               height={760}
               alt="gallery Image 5"
               className="rounded-4xl shadow-md shadow-primary object-cover"
-              src={`/images/${serviceName}/galleryImage5.png`}
+              src={`/images/${serviceName}/galleryImage5.jpg`}
             />
             <Image
               width={1024}
               height={760}
               alt="gallery Image 6"
               className="rounded-4xl shadow-md shadow-primary"
-              src={`/images/${serviceName}/galleryImage6.png`}
+              src={`/images/${serviceName}/galleryImage6.jpg`}
             />
           </div>
         </div>

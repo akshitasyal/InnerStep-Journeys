@@ -1,4 +1,4 @@
-import ContactUsForm from "./components/contactUsForm";
+import ContactUsForm from "@/app/components/ContactUsForm";
 import Testimonials from "./components/testimonial/Testimonials";
 import AboutUs from "./components/AboutUs";
 import WhatWeOffer from "./components/whatWeOffer/WhatWeOffer";

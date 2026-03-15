@@ -1,7 +1,7 @@
-import FeaturedDestination from "../components/featruedDestination/FeaturedDestination";
-import ContactUsForm from "../components/contactUsForm";
+import FeaturedDestination from "@/app/components/FeaturedDestination";
+import ContactUsForm from "@/app/components/ContactUsForm";
 import Image from "next/image";
-import ImageGallery from "../[service]/imageGallery";
+import ImageGallery from "@/app/[service]/imageGallery";
 
 export default function YatraPage() {
   return (

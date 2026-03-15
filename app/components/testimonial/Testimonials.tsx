@@ -32,13 +32,6 @@ const testimonialData: TestimonialData[] = [
     comment:
       "The cultural immersion was profound. I've incorporated the mindfulness practices into my daily routine and business operations.",
   },
-  {
-    imageUrl: "/images/testimonial-4.jpg",
-    name: "Raj Patel",
-    location: "Business Owner, Bangalore",
-    comment:
-      "The cultural immersion was profound. I've incorporated the mindfulness practices into my daily routine and business operations.",
-  },
 ];
 
 const Testimonials: React.FC = () => {
@@ -99,7 +92,7 @@ const Testimonials: React.FC = () => {
     };
   }, [cardWidth]);
 
-  const HandelSnapping = (destinationIndex: number) => {
+  const HandleSnapping = (destinationIndex: number) => {
     container.current?.scrollTo({
       left: destinationIndex * cardWidth,
       behavior: "smooth",
@@ -138,7 +131,7 @@ const Testimonials: React.FC = () => {
               className={` rounded-4xl bg-primary cursor-pointer ${
                 currentIndex == i ? "w-4 h-4" : "w-3 h-3"
               }`}
-              onClick={() => HandelSnapping(i)}
+              onClick={() => HandleSnapping(i)}
             ></div>
           ))}
         </div>

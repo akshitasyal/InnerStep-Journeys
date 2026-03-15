@@ -1,8 +1,18 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
-import ContactUsForm from "../../components/contactUsForm";
+import ContactUsForm from "@/app/components/ContactUsForm";
+import YatraBookingModal from "../../components/YatraBookingModal";
 
 const RishikeshPage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedJourney, setSelectedJourney] = useState("");
+
+  const handleBookNow = () => {
+    setSelectedJourney("Rishikesh Yatra");
+    setIsModalOpen(true);
+  };
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -365,6 +375,7 @@ const RishikeshPage = () => {
           <button
             type="button"
             className="bg-primary text-white font-cinzel py-3 px-8 rounded-lg text-lg hover:bg-primary/80 transition-colors cursor-pointer"
+            onClick={handleBookNow}
           >
             Book Your Journey
           </button>
@@ -373,6 +384,13 @@ const RishikeshPage = () => {
 
       {/* Contact Form */}
       <ContactUsForm className="my-20" />
+
+      {/* Booking Modal */}
+      <YatraBookingModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        journey={selectedJourney}
+      />
     </div>
   );
 };
