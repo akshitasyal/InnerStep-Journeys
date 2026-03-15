@@ -33,7 +33,7 @@ Allows users to explore and book spiritual or cultural experiences provided by t
 
 ### Screenshot
 
-![Experience Module](Assets/experience.png)
+![Experience Module](Assets/expereince.png)
 ![Experience Module](Assets/booking.png)
 
 ---
@@ -82,7 +82,7 @@ Allows devotees to make donations and participate in temple services.
 
 ### Screenshot
 
-![Seva Module](Assetts/Seva.png)
+![Seva Module](Assets/Seva.png)
 ![Seva Module](Assets/Donation.png)
 
 ---
