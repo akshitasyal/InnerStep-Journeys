@@ -1,13 +1,13 @@
-# InnerStep Journeys 🌍
+# InnerStep Journeys 
 
 A modern travel and spiritual journey booking platform designed to help users explore and plan meaningful trips to sacred destinations across India.
 
-## ✨ Overview
+##  Overview
 
 InnerStep Journeys is a web-based platform where users can explore different spiritual destinations, view travel information, and book personalized journeys.
 The platform provides a clean user interface and organized destination pages for various Yatra locations.
 
-## 🚀 Features
+##  Features
 
 * 🧭 Explore popular spiritual destinations
 * 📍 Dedicated pages for each Yatra location
