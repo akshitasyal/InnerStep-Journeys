@@ -1,33 +1,133 @@
-# InnerStep Journeys 
+# Yatra – Spiritual Travel & Temple Services Platform
 
-A modern travel and spiritual journey booking platform designed to help users explore and plan meaningful trips to sacred destinations across India.
+Yatra is a spiritual travel and temple services platform that allows devotees to plan pilgrimages, book darshan slots, explore temple experiences, and contribute through seva (donations). The platform simplifies spiritual journeys by organizing multiple temple-related services in a single system.
 
-##  Overview
+🔗 Live Demo: https://your-yatra-project-link.vercel.app
 
-InnerStep Journeys is a web-based platform where users can explore different spiritual destinations, view travel information, and book personalized journeys.
-The platform provides a clean user interface and organized destination pages for various Yatra locations.
+---
 
-##  Features
+# Overview
 
-* 🧭 Explore popular spiritual destinations
-* 📍 Dedicated pages for each Yatra location
-* 🖼 Image gallery for destinations
-* 📝 Testimonials section
-* 📩 Contact form for travel inquiries
-* 🗺 Featured destinations section
-* 📅 Booking modal for trip requests
-* 📱 Responsive design for all devices
+The Yatra platform helps users manage spiritual activities through four primary modules:
 
-## 🗺 Destinations Included
+* Experience booking
+* Darshan slot reservation
+* Yatra pilgrimage planning
+* Seva (donation) contributions
 
-* Varanasi
-* Vrindavan
-* Rishikesh
-* Ujjain
+Users can explore destinations, book temple-related services, and manage their bookings through a centralized interface.
 
-Each destination includes detailed information and visuals to help travelers plan their spiritual journey.
+---
 
-## 🛠 Tech Stack
+# Platform Modules
+
+## 1️⃣ Experience Module
+
+Allows users to explore and book spiritual or cultural experiences provided by temples.
+
+### Features
+
+* Browse available experiences
+* View detailed information about experiences
+* Book experiences online
+
+### Screenshot
+
+![Experience Module](screenshots/experience.png)
+
+---
+
+## 2️⃣ Darshan Module
+
+Enables devotees to book darshan slots in advance, reducing waiting time at temples.
+
+### Features
+
+* View available darshan slots
+* Reserve darshan tickets
+* Manage booked darshan visits
+
+### Screenshot
+
+![Darshan Module](screenshots/darshan.png)
+
+---
+
+## 3️⃣ Yatra Module
+
+Helps users plan and book pilgrimage journeys to spiritual destinations.
+
+### Features
+
+* Browse pilgrimage destinations
+* View yatra itinerary
+* Book travel packages
+
+### Screenshot
+
+![Yatra Module](screenshots/yatra.png)
+
+---
+
+## 4️⃣ Seva Module
+
+Allows devotees to make donations and participate in temple services.
+
+### Features
+
+* Online donation (daan)
+* Support temple services
+* Participate in religious offerings
+
+### Screenshot
+
+![Seva Module](screenshots/seva.png)
+
+---
+
+# Project Structure
+
+```id="yatra-structure"
+app
+ ├ service
+ │   ├ activitiesSection.tsx
+ │   ├ imageGallery.tsx
+ │   ├ serviceBanner.tsx
+ │   └ page.tsx
+ │
+ ├ components
+ │   ├ featuredDestination
+ │   ├ homepageBanner
+ │   ├ testimonial
+ │   ├ welcome
+ │   ├ whatWeOffer
+ │   ├ AboutUs.tsx
+ │   ├ BookingModal.tsx
+ │   ├ DonationModal.tsx
+ │   ├ YatraBookingModal.tsx
+ │   ├ contactUsForm.tsx
+ │   └ heroSection.tsx
+ │
+ ├ darshan
+ ├ yatra
+ │
+ ├ lib
+ │   ├ data
+ │   ├ dateAndTime.ts
+ │   └ supabase.ts
+ │
+ ├ layout.tsx
+ ├ page.tsx
+ └ globals.css
+
+public
+ ├ images
+ └ svg
+```
+
+---
+
+# Tech Stack
 
 Frontend:
 
@@ -36,81 +136,65 @@ Frontend:
 * TypeScript
 * Tailwind CSS
 
-Other Tools:
+Backend / Services:
 
-* Git & GitHub
-* Component-based architecture
-
-## 📂 Project Structure
-
-```
-app
- ├── components
- │   ├── testimonial
- │   ├── featuredDestination
- │   ├── contactUsForm
- │   └── YatraBookingModal
- │
- ├── yatra
- │   ├── varanasi
- │   ├── vrindavan
- │   ├── rishikesh
- │   └── ujjain
- │
- ├── layout.tsx
- ├── page.tsx
- └── lib
-```
-
-## ⚙️ Installation & Setup
-
-Clone the repository:
-
-```
-git clone https://github.com/akshitasyal/InnerStep-Journeys.git
-```
-
-Navigate to the project folder:
-
-```
-cd InnerStep-Journeys
-```
-
-Install dependencies:
-
-```
-npm install
-```
-
-Run the development server:
-
-```
-npm run dev
-```
-
-Open in browser:
-
-```
-http://localhost:3000
-```
-
-![Homepage](innerstep.png)
-
-## 🌱 Future Improvements
-
-* User authentication
-* Online booking and payment system
-* Admin dashboard for managing destinations
-* Travel itinerary generation
-* Integration with maps and travel APIs
-
-## 👩‍💻 Author
-
-**Akshita Syal**
-
-GitHub:
-https://github.com/akshitasyal
+* Supabase
+* PostgreSQL
 
 ---
 
-⭐ If you like this project, consider giving it a star!
+# Installation
+
+Clone the repository
+
+```id="clone"
+git clone https://github.com/akshitasyal/yatra-project.git
+```
+
+Go to project folder
+
+```id="cd"
+cd yatra-project
+```
+
+Install dependencies
+
+```id="install"
+npm install
+```
+
+Run the development server
+
+```id="dev"
+npm run dev
+```
+
+---
+
+# Future Improvements
+
+* Online payment gateway integration
+* User authentication system
+* Booking notifications
+* Reviews and ratings for experiences
+* Mobile responsive enhancements
+
+---
+
+# Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Submit a pull request
+
+---
+
+# Author
+
+Akshita Syal
+GitHub: https://github.com/akshitasyal
+
+⭐ If you like this project, consider giving it a star.
