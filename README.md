@@ -2,7 +2,7 @@
 
 Yatra is a spiritual travel and temple services platform that allows devotees to plan pilgrimages, book darshan slots, explore temple experiences, and contribute through seva (donations). The platform simplifies spiritual journeys by organizing multiple temple-related services in a single system.
 
-🔗 Live Demo: https://your-yatra-project-link.vercel.app
+🔗 Live Demo: https://innerstepjourneys.com
 
 ---
 
