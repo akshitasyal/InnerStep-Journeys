@@ -94,16 +94,7 @@ Open in browser:
 http://localhost:3000
 ```
 
-## 📸 Screenshots
-
-Add screenshots of:
-
-* Homepage
-* Destination pages
-* Booking modal
-* Testimonials section
-
-(You can upload images inside a `/screenshots` folder and link them here.)
+![Homepage](innerstep.png)
 
 ## 🌱 Future Improvements
 
