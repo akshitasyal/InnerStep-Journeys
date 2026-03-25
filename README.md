@@ -31,7 +31,7 @@ Allows users to explore and book spiritual or cultural experiences provided by t
 * View detailed information about experiences
 * Book experiences online
 
-### Screenshot
+
 
 ![Experience Module](Assets/expereince.png)
 ![Experience Module](Assets/booking.png)
@@ -48,13 +48,13 @@ Enables devotees to book darshan slots in advance, reducing waiting time at temp
 * Reserve darshan tickets
 * Manage booked darshan visits
 
-### Screenshot
+
 
 ![Darshan Module](Assets/Darshan.png)
 
 ---
 
-## 3️⃣ Yatra Module
+
 
 Helps users plan and book pilgrimage journeys to spiritual destinations.
 
@@ -64,13 +64,13 @@ Helps users plan and book pilgrimage journeys to spiritual destinations.
 * View yatra itinerary
 * Book travel packages
 
-### Screenshot
+
 
 ![Yatra Module](Assets/Yatra.png)
 
 ---
 
-## 4️⃣ Seva Module
+
 
 Allows devotees to make donations and participate in temple services.
 
