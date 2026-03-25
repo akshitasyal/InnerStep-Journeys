@@ -80,7 +80,6 @@ Allows devotees to make donations and participate in temple services.
 * Support temple services
 * Participate in religious offerings
 
-### Screenshot
 
 ![Seva Module](Assets/Seva.png)
 ![Seva Module](Assets/Donation.png)
